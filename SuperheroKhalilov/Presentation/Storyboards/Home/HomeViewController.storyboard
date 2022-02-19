@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="qh2-dV-0TK">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Okg-fy-avp" customClass="HomeViewController" customModule="SuperheroKhalilov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ige-Vk-Pjn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-9S-yUt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-3I-b0p">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SexLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-IQ-MVm">
+                                        <rect key="frame" x="149" y="80" width="116" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="Inq-ca-Tnj"/>
+                                            <constraint firstAttribute="height" constant="38" id="d5l-VN-ZIt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="DFT-IQ-MVm" firstAttribute="top" secondItem="XJX-9S-yUt" secondAttribute="top" constant="80" id="jye-Ph-j8U"/>
+                                    <constraint firstItem="DFT-IQ-MVm" firstAttribute="centerX" secondItem="XJX-9S-yUt" secondAttribute="centerX" id="soa-qC-ze9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8fs-e7-MAq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XJX-9S-yUt" secondAttribute="bottom" id="Nvb-6v-fQn"/>
+                            <constraint firstItem="8fs-e7-MAq" firstAttribute="trailing" secondItem="XJX-9S-yUt" secondAttribute="trailing" id="Yj5-da-jck"/>
+                            <constraint firstItem="XJX-9S-yUt" firstAttribute="top" secondItem="Ige-Vk-Pjn" secondAttribute="top" id="bnU-v5-Aoi"/>
+                            <constraint firstItem="XJX-9S-yUt" firstAttribute="leading" secondItem="8fs-e7-MAq" secondAttribute="leading" id="mz6-rU-twU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeBackgroundImage" destination="KCc-3I-b0p" id="f5m-78-aYx"/>
+                        <outlet property="sexLabel" destination="DFT-IQ-MVm" id="VTh-nP-OKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vT4-KA-65t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

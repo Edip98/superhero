@@ -16,8 +16,24 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let startViewController = StartViewController.instantiate()
-        startViewController.coordinator = self
-        navigationController.pushViewController(startViewController, animated: false)
+        ProfileManager.sharedInstance.fetchProfile()
+        
+        if ProfileManager.sharedInstance.userProfile != nil {
+            moveToHome()
+        } else {
+            let vc = StartViewController.instantiate()
+            vc.coordinator = self
+            navigationController.pushViewController(vc, animated: false)
+        }
+    }
+    
+    func moveToHome() {
+        let vc = HomeViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func back() {
+        navigationController.popViewController(animated: true)
     }
 }

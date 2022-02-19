@@ -18,6 +18,18 @@
 		C3CD50F127C1874200488B77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F027C1874200488B77 /* BaseViewController.swift */; };
 		C3CD50F327C1875900488B77 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F227C1875900488B77 /* StartViewController.swift */; };
 		C3CD50F527C1877600488B77 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD50F427C1877600488B77 /* StartViewController.storyboard */; };
+		C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F727C18B8F00488B77 /* StartViewModel.swift */; };
+		C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */; };
+		C3CD50FC27C18BC100488B77 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50FB27C18BC100488B77 /* ProfileManager.swift */; };
+		C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */; };
+		C3CD510227C18BF600488B77 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510027C18BF600488B77 /* Profile+CoreDataClass.swift */; };
+		C3CD510327C18BF600488B77 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510127C18BF600488B77 /* Profile+CoreDataProperties.swift */; };
+		C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */; };
+		C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */; };
+		C3CD510927C18C4400488B77 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510827C18C4400488B77 /* UIView+Gradient.swift */; };
+		C3CD510B27C18CC600488B77 /* Saira.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3CD510A27C18CC600488B77 /* Saira.ttf */; };
+		C3CD510E27C18CEE00488B77 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD510D27C18CEE00488B77 /* HomeViewController.storyboard */; };
+		C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510F27C18D3000488B77 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +46,18 @@
 		C3CD50F027C1874200488B77 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C3CD50F227C1875900488B77 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C3CD50F427C1877600488B77 /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
+		C3CD50F727C18B8F00488B77 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C3CD50FB27C18BC100488B77 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
+		C3CD510027C18BF600488B77 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3CD510127C18BF600488B77 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
+		C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
+		C3CD510827C18C4400488B77 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		C3CD510A27C18CC600488B77 /* Saira.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Saira.ttf; sourceTree = "<group>"; };
+		C3CD510D27C18CEE00488B77 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		C3CD510F27C18D3000488B77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +114,7 @@
 		C3CD50DE27C1868700488B77 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD510A27C18CC600488B77 /* Saira.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -98,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C3CD50F627C1877800488B77 /* Start */,
+				C3CD510C27C18CDF00488B77 /* Home */,
 				C3CD50CF27C185FB00488B77 /* Main.storyboard */,
 				C3CD50D427C185FD00488B77 /* LaunchScreen.storyboard */,
 			);
@@ -107,8 +133,9 @@
 		C3CD50E027C186A700488B77 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3CD50F227C1875900488B77 /* StartViewController.swift */,
 				C3CD50F027C1874200488B77 /* BaseViewController.swift */,
+				C3CD50F227C1875900488B77 /* StartViewController.swift */,
+				C3CD510F27C18D3000488B77 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +143,8 @@
 		C3CD50E127C186AF00488B77 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD50F727C18B8F00488B77 /* StartViewModel.swift */,
+				C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,6 +197,9 @@
 		C3CD50E727C186E500488B77 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */,
+				C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */,
+				C3CD510827C18C4400488B77 /* UIView+Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +207,7 @@
 		C3CD50EC27C1871900488B77 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD50FB27C18BC100488B77 /* ProfileManager.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -182,6 +215,9 @@
 		C3CD50ED27C1872000488B77 /* ProfileCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD510027C18BF600488B77 /* Profile+CoreDataClass.swift */,
+				C3CD510127C18BF600488B77 /* Profile+CoreDataProperties.swift */,
+				C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */,
 			);
 			path = ProfileCoreData;
 			sourceTree = "<group>";
@@ -192,6 +228,14 @@
 				C3CD50F427C1877600488B77 /* StartViewController.storyboard */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		C3CD510C27C18CDF00488B77 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD510D27C18CEE00488B77 /* HomeViewController.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CD50D627C185FD00488B77 /* LaunchScreen.storyboard in Resources */,
+				C3CD510B27C18CC600488B77 /* Saira.ttf in Resources */,
+				C3CD510E27C18CEE00488B77 /* HomeViewController.storyboard in Resources */,
 				C3CD50D327C185FD00488B77 /* Assets.xcassets in Resources */,
 				C3CD50F527C1877600488B77 /* StartViewController.storyboard in Resources */,
 				C3CD50D127C185FB00488B77 /* Main.storyboard in Resources */,
@@ -267,12 +313,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */,
+				C3CD50FC27C18BC100488B77 /* ProfileManager.swift in Sources */,
+				C3CD510927C18C4400488B77 /* UIView+Gradient.swift in Sources */,
+				C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */,
+				C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */,
+				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
+				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
 				C3CD50F327C1875900488B77 /* StartViewController.swift in Sources */,
+				C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */,
 				C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */,
 				C3CD50E927C186FC00488B77 /* Coordinator.swift in Sources */,
+				C3CD510227C18BF600488B77 /* Profile+CoreDataClass.swift in Sources */,
 				C3CD50EF27C1872F00488B77 /* MainCoordinator.swift in Sources */,
+				C3CD510327C18BF600488B77 /* Profile+CoreDataProperties.swift in Sources */,
 				C3CD50EB27C1870D00488B77 /* Storyboarded.swift in Sources */,
 				C3CD50F127C1874200488B77 /* BaseViewController.swift in Sources */,
+				C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +548,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */,
+			);
+			currentVersion = C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */;
+			path = Profile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3CD50BE27C185FB00488B77 /* Project object */;
 }
