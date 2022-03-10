@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C350863B27DA201A002C8EFB /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863A27DA201A002C8EFB /* Coordinator+Profile.swift */; };
+		C350863D27DA206D002C8EFB /* Coordinatr+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863C27DA206D002C8EFB /* Coordinatr+Progress.swift */; };
+		C350863F27DA207B002C8EFB /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863E27DA207B002C8EFB /* Coordinator+Programs.swift */; };
+		C350864127DA209A002C8EFB /* Coordinator+Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350864027DA209A002C8EFB /* Coordinator+Calculator.swift */; };
+		C350864327DA20B9002C8EFB /* Coordinator+Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350864227DA20B9002C8EFB /* Coordinator+Muscles.swift */; };
 		C36ADE2327C5089800C0322C /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2127C5089800C0322C /* MenuTableCell.swift */; };
 		C36ADE2427C5089800C0322C /* MenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36ADE2227C5089800C0322C /* MenuTableCell.xib */; };
-		C36ADE2D27C52DCB00C0322C /* Coordinator+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */; };
-		C36ADE2F27C52DD500C0322C /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */; };
-		C36ADE3127C52DDD00C0322C /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */; };
-		C36ADE3327C52DEC00C0322C /* Coordinator+Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */; };
-		C36ADE3527C52DF800C0322C /* Coordinator+Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */; };
 		C36ADE3A27C52E7200C0322C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3927C52E7200C0322C /* ProfileViewModel.swift */; };
 		C36ADE3E27C52E8B00C0322C /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */; };
 		C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */; };
@@ -51,13 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C350863A27DA201A002C8EFB /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
+		C350863C27DA206D002C8EFB /* Coordinatr+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinatr+Progress.swift"; sourceTree = "<group>"; };
+		C350863E27DA207B002C8EFB /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
+		C350864027DA209A002C8EFB /* Coordinator+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Calculator.swift"; sourceTree = "<group>"; };
+		C350864227DA20B9002C8EFB /* Coordinator+Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Muscles.swift"; sourceTree = "<group>"; };
 		C36ADE2127C5089800C0322C /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		C36ADE2227C5089800C0322C /* MenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCell.xib; sourceTree = "<group>"; };
-		C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Progress.swift"; sourceTree = "<group>"; };
-		C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
-		C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
-		C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Muscles.swift"; sourceTree = "<group>"; };
-		C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Calculator.swift"; sourceTree = "<group>"; };
 		C36ADE3927C52E7200C0322C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewModel.swift; sourceTree = "<group>"; };
@@ -359,11 +359,11 @@
 		C3CD50E327C186C000488B77 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */,
-				C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */,
-				C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */,
-				C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */,
-				C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */,
+				C350864227DA20B9002C8EFB /* Coordinator+Muscles.swift */,
+				C350864027DA209A002C8EFB /* Coordinator+Calculator.swift */,
+				C350863E27DA207B002C8EFB /* Coordinator+Programs.swift */,
+				C350863C27DA206D002C8EFB /* Coordinatr+Progress.swift */,
+				C350863A27DA201A002C8EFB /* Coordinator+Profile.swift */,
 				C3CD50EE27C1872F00488B77 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -520,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36ADE3127C52DDD00C0322C /* Coordinator+Profile.swift in Sources */,
 				C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */,
 				C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */,
 				C36ADE2327C5089800C0322C /* MenuTableCell.swift in Sources */,
@@ -530,17 +529,20 @@
 				C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */,
 				C36ADE3A27C52E7200C0322C /* ProfileViewModel.swift in Sources */,
 				C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */,
-				C36ADE3327C52DEC00C0322C /* Coordinator+Muscles.swift in Sources */,
 				C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */,
 				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
 				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
 				C36ADE4927C52FF000C0322C /* ProfileViewController.swift in Sources */,
+				C350863F27DA207B002C8EFB /* Coordinator+Programs.swift in Sources */,
 				C3CD50F327C1875900488B77 /* StartViewController.swift in Sources */,
 				C36ADE4B27C5300A00C0322C /* ProgressViewController.swift in Sources */,
+				C350864127DA209A002C8EFB /* Coordinator+Calculator.swift in Sources */,
 				C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */,
+				C350864327DA20B9002C8EFB /* Coordinator+Muscles.swift in Sources */,
 				C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */,
-				C36ADE3527C52DF800C0322C /* Coordinator+Calculator.swift in Sources */,
 				C3CD50E927C186FC00488B77 /* Coordinator.swift in Sources */,
+				C350863B27DA201A002C8EFB /* Coordinator+Profile.swift in Sources */,
+				C350863D27DA206D002C8EFB /* Coordinatr+Progress.swift in Sources */,
 				C3CD510227C18BF600488B77 /* Profile+CoreDataClass.swift in Sources */,
 				C36ADE5127C5304400C0322C /* MusclesViewController.swift in Sources */,
 				C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */,
@@ -549,10 +551,8 @@
 				C36ADE4727C52EBC00C0322C /* MusclesViewModel.swift in Sources */,
 				C3CD510327C18BF600488B77 /* Profile+CoreDataProperties.swift in Sources */,
 				C3CD50EB27C1870D00488B77 /* Storyboarded.swift in Sources */,
-				C36ADE2D27C52DCB00C0322C /* Coordinator+Progress.swift in Sources */,
 				C3CD50F127C1874200488B77 /* BaseViewController.swift in Sources */,
 				C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */,
-				C36ADE2F27C52DD500C0322C /* Coordinator+Programs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
