@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C36ADE2327C5089800C0322C /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2127C5089800C0322C /* MenuTableCell.swift */; };
+		C36ADE2427C5089800C0322C /* MenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36ADE2227C5089800C0322C /* MenuTableCell.xib */; };
+		C36ADE2D27C52DCB00C0322C /* Coordinator+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */; };
+		C36ADE2F27C52DD500C0322C /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */; };
+		C36ADE3127C52DDD00C0322C /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */; };
+		C36ADE3327C52DEC00C0322C /* Coordinator+Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */; };
+		C36ADE3527C52DF800C0322C /* Coordinator+Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */; };
+		C36ADE3A27C52E7200C0322C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3927C52E7200C0322C /* ProfileViewModel.swift */; };
+		C36ADE3E27C52E8B00C0322C /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */; };
+		C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */; };
+		C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4327C52EB000C0322C /* CalculatorViewModel.swift */; };
+		C36ADE4727C52EBC00C0322C /* MusclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */; };
+		C36ADE4927C52FF000C0322C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4827C52FF000C0322C /* ProfileViewController.swift */; };
+		C36ADE4B27C5300A00C0322C /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4A27C5300A00C0322C /* ProgressViewController.swift */; };
+		C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */; };
+		C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4E27C5303000C0322C /* CalculatorViewController.swift */; };
+		C36ADE5127C5304400C0322C /* MusclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE5027C5304400C0322C /* MusclesViewController.swift */; };
+		C36ADE5427C5306900C0322C /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36ADE5327C5306900C0322C /* ProfileViewController.storyboard */; };
+		C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */; };
 		C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50C927C185FB00488B77 /* AppDelegate.swift */; };
 		C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */; };
 		C3CD50D127C185FB00488B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD50CF27C185FB00488B77 /* Main.storyboard */; };
@@ -27,12 +46,30 @@
 		C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */; };
 		C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */; };
 		C3CD510927C18C4400488B77 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510827C18C4400488B77 /* UIView+Gradient.swift */; };
-		C3CD510B27C18CC600488B77 /* Saira.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3CD510A27C18CC600488B77 /* Saira.ttf */; };
 		C3CD510E27C18CEE00488B77 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD510D27C18CEE00488B77 /* HomeViewController.storyboard */; };
 		C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510F27C18D3000488B77 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C36ADE2127C5089800C0322C /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
+		C36ADE2227C5089800C0322C /* MenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCell.xib; sourceTree = "<group>"; };
+		C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Progress.swift"; sourceTree = "<group>"; };
+		C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
+		C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
+		C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Muscles.swift"; sourceTree = "<group>"; };
+		C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Calculator.swift"; sourceTree = "<group>"; };
+		C36ADE3927C52E7200C0322C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewModel.swift; sourceTree = "<group>"; };
+		C36ADE4327C52EB000C0322C /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewModel.swift; sourceTree = "<group>"; };
+		C36ADE4827C52FF000C0322C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C36ADE4A27C5300A00C0322C /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
+		C36ADE4E27C5303000C0322C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		C36ADE5027C5304400C0322C /* MusclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewController.swift; sourceTree = "<group>"; };
+		C36ADE5327C5306900C0322C /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		C3CD50C627C185FB00488B77 /* SuperheroKhalilov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroKhalilov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD50C927C185FB00488B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +92,6 @@
 		C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
 		C3CD510827C18C4400488B77 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
-		C3CD510A27C18CC600488B77 /* Saira.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Saira.ttf; sourceTree = "<group>"; };
 		C3CD510D27C18CEE00488B77 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		C3CD510F27C18D3000488B77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +107,159 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C36ADE1827C4EFCB00C0322C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE1927C4EFD600C0322C /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C36ADE1927C4EFD600C0322C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE1C27C4F03C00C0322C /* Menu */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C36ADE1C27C4F03C00C0322C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE2127C5089800C0322C /* MenuTableCell.swift */,
+				C36ADE2227C5089800C0322C /* MenuTableCell.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		C36ADE2527C52D4800C0322C /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD50F227C1875900488B77 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C36ADE2627C52D5100C0322C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD510F27C18D3000488B77 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C36ADE2727C52D5800C0322C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4827C52FF000C0322C /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C36ADE2827C52D7500C0322C /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4A27C5300A00C0322C /* ProgressViewController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		C36ADE2927C52D8100C0322C /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		C36ADE2A27C52D8B00C0322C /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4E27C5303000C0322C /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		C36ADE2B27C52D9600C0322C /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE5027C5304400C0322C /* MusclesViewController.swift */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		C36ADE3627C52E5300C0322C /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD50F727C18B8F00488B77 /* StartViewModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C36ADE3727C52E5700C0322C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C36ADE3827C52E6400C0322C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE3927C52E7200C0322C /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C36ADE3B27C52E7600C0322C /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		C36ADE3F27C52E8F00C0322C /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		C36ADE4227C52EA200C0322C /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4327C52EB000C0322C /* CalculatorViewModel.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		C36ADE4527C52EB100C0322C /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		C36ADE5227C5305A00C0322C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C36ADE5327C5306900C0322C /* ProfileViewController.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C3B5C13827D9EF0F008FE5C8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD50F027C1874200488B77 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C3CD50BD27C185FB00488B77 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +303,7 @@
 		C3CD50DE27C1868700488B77 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C3CD510A27C18CC600488B77 /* Saira.ttf */,
+				C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -122,6 +311,7 @@
 		C3CD50DF27C1869F00488B77 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C36ADE5227C5305A00C0322C /* Profile */,
 				C3CD50F627C1877800488B77 /* Start */,
 				C3CD510C27C18CDF00488B77 /* Home */,
 				C3CD50CF27C185FB00488B77 /* Main.storyboard */,
@@ -133,9 +323,13 @@
 		C3CD50E027C186A700488B77 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3CD50F027C1874200488B77 /* BaseViewController.swift */,
-				C3CD50F227C1875900488B77 /* StartViewController.swift */,
-				C3CD510F27C18D3000488B77 /* HomeViewController.swift */,
+				C36ADE2B27C52D9600C0322C /* Muscles */,
+				C36ADE2A27C52D8B00C0322C /* Calculator */,
+				C36ADE2927C52D8100C0322C /* Programs */,
+				C36ADE2827C52D7500C0322C /* Progress */,
+				C36ADE2727C52D5800C0322C /* Profile */,
+				C36ADE2627C52D5100C0322C /* Home */,
+				C36ADE2527C52D4800C0322C /* Start */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,8 +337,13 @@
 		C3CD50E127C186AF00488B77 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C3CD50F727C18B8F00488B77 /* StartViewModel.swift */,
-				C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */,
+				C36ADE4527C52EB100C0322C /* Muscles */,
+				C36ADE4227C52EA200C0322C /* Calculator */,
+				C36ADE3F27C52E8F00C0322C /* Programs */,
+				C36ADE3B27C52E7600C0322C /* Progress */,
+				C36ADE3827C52E6400C0322C /* Profile */,
+				C36ADE3727C52E5700C0322C /* Home */,
+				C36ADE3627C52E5300C0322C /* Start */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,6 +351,7 @@
 		C3CD50E227C186B500488B77 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				C36ADE1827C4EFCB00C0322C /* Cells */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -159,6 +359,11 @@
 		C3CD50E327C186C000488B77 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				C36ADE3227C52DEC00C0322C /* Coordinator+Muscles.swift */,
+				C36ADE3427C52DF800C0322C /* Coordinator+Calculator.swift */,
+				C36ADE2E27C52DD500C0322C /* Coordinator+Programs.swift */,
+				C36ADE2C27C52DCB00C0322C /* Coordinator+Progress.swift */,
+				C36ADE3027C52DDD00C0322C /* Coordinator+Profile.swift */,
 				C3CD50EE27C1872F00488B77 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -171,6 +376,7 @@
 				C3CD50E227C186B500488B77 /* VIews */,
 				C3CD50E127C186AF00488B77 /* ViewModels */,
 				C3CD50E027C186A700488B77 /* ViewControllers */,
+				C3B5C13827D9EF0F008FE5C8 /* Base */,
 				C3CD50DF27C1869F00488B77 /* Storyboards */,
 			);
 			path = Presentation;
@@ -297,10 +503,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CD50D627C185FD00488B77 /* LaunchScreen.storyboard in Resources */,
-				C3CD510B27C18CC600488B77 /* Saira.ttf in Resources */,
 				C3CD510E27C18CEE00488B77 /* HomeViewController.storyboard in Resources */,
 				C3CD50D327C185FD00488B77 /* Assets.xcassets in Resources */,
 				C3CD50F527C1877600488B77 /* StartViewController.storyboard in Resources */,
+				C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */,
+				C36ADE2427C5089800C0322C /* MenuTableCell.xib in Resources */,
+				C36ADE5427C5306900C0322C /* ProfileViewController.storyboard in Resources */,
 				C3CD50D127C185FB00488B77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,23 +520,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36ADE3127C52DDD00C0322C /* Coordinator+Profile.swift in Sources */,
 				C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */,
+				C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */,
+				C36ADE2327C5089800C0322C /* MenuTableCell.swift in Sources */,
+				C36ADE3E27C52E8B00C0322C /* ProgressViewModel.swift in Sources */,
 				C3CD50FC27C18BC100488B77 /* ProfileManager.swift in Sources */,
 				C3CD510927C18C4400488B77 /* UIView+Gradient.swift in Sources */,
 				C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */,
+				C36ADE3A27C52E7200C0322C /* ProfileViewModel.swift in Sources */,
 				C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */,
+				C36ADE3327C52DEC00C0322C /* Coordinator+Muscles.swift in Sources */,
+				C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */,
 				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
 				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
+				C36ADE4927C52FF000C0322C /* ProfileViewController.swift in Sources */,
 				C3CD50F327C1875900488B77 /* StartViewController.swift in Sources */,
+				C36ADE4B27C5300A00C0322C /* ProgressViewController.swift in Sources */,
 				C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */,
 				C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */,
+				C36ADE3527C52DF800C0322C /* Coordinator+Calculator.swift in Sources */,
 				C3CD50E927C186FC00488B77 /* Coordinator.swift in Sources */,
 				C3CD510227C18BF600488B77 /* Profile+CoreDataClass.swift in Sources */,
+				C36ADE5127C5304400C0322C /* MusclesViewController.swift in Sources */,
+				C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */,
 				C3CD50EF27C1872F00488B77 /* MainCoordinator.swift in Sources */,
+				C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */,
+				C36ADE4727C52EBC00C0322C /* MusclesViewModel.swift in Sources */,
 				C3CD510327C18BF600488B77 /* Profile+CoreDataProperties.swift in Sources */,
 				C3CD50EB27C1870D00488B77 /* Storyboarded.swift in Sources */,
+				C36ADE2D27C52DCB00C0322C /* Coordinator+Progress.swift in Sources */,
 				C3CD50F127C1874200488B77 /* BaseViewController.swift in Sources */,
 				C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */,
+				C36ADE2F27C52DD500C0322C /* Coordinator+Programs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +629,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -477,24 +701,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B7N93B75Y5;
+				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroKhalilov/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ED.SuperheroKhalilov;
+				PRODUCT_BUNDLE_IDENTIFIER = ED.SuperheroKhalilov.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -505,24 +732,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B7N93B75Y5;
+				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroKhalilov/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ED.SuperheroKhalilov;
+				PRODUCT_BUNDLE_IDENTIFIER = ED.SuperheroKhalilov.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

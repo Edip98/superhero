@@ -42,7 +42,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonsTapped:" destination="ihS-w4-ZQh" eventType="touchUpInside" id="bS6-xb-C23"/>
+                                            <action selector="sexButtonsTapped:" destination="ihS-w4-ZQh" eventType="touchUpInside" id="1zg-In-MOM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,7 +81,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonsTapped:" destination="ihS-w4-ZQh" eventType="touchUpInside" id="4cf-Ab-Tpc"/>
+                                            <action selector="sexButtonsTapped:" destination="ihS-w4-ZQh" eventType="touchUpInside" id="zuP-rY-yTg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -106,16 +106,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vx-t3-QW2">
-                                                <rect key="frame" x="84" y="54" width="246" height="26"/>
+                                                <rect key="frame" x="82" y="54" width="250" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="nUr-OX-lVT"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2Vx-t3-QW2" firstAttribute="leading" secondItem="7VJ-HN-hXf" secondAttribute="leading" constant="84" id="I90-DV-vir"/>
-                                            <constraint firstAttribute="trailing" secondItem="2Vx-t3-QW2" secondAttribute="trailing" constant="84" id="Nmr-5N-I8g"/>
                                             <constraint firstItem="2Vx-t3-QW2" firstAttribute="top" secondItem="7VJ-HN-hXf" secondAttribute="top" constant="54" id="VAw-hs-Wje"/>
+                                            <constraint firstItem="2Vx-t3-QW2" firstAttribute="centerX" secondItem="7VJ-HN-hXf" secondAttribute="centerX" id="Wdl-BF-9fh"/>
                                             <constraint firstAttribute="bottom" secondItem="2Vx-t3-QW2" secondAttribute="bottom" constant="11" id="ja3-z9-lIb"/>
                                         </constraints>
                                     </view>
@@ -123,16 +125,18 @@
                                         <rect key="frame" x="0.0" y="91" width="414" height="91"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvs-0E-5P5">
-                                                <rect key="frame" x="125" y="0.0" width="164" height="16"/>
+                                                <rect key="frame" x="77.5" y="0.0" width="259" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="259" id="kMt-AJ-hAM"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="lvs-0E-5P5" secondAttribute="trailing" constant="125" id="Ag1-fP-h5t"/>
-                                            <constraint firstItem="lvs-0E-5P5" firstAttribute="leading" secondItem="MhP-NZ-mfH" secondAttribute="leading" constant="125" id="bo5-We-rXu"/>
                                             <constraint firstAttribute="bottom" secondItem="lvs-0E-5P5" secondAttribute="bottom" constant="75" id="c33-av-3ji"/>
+                                            <constraint firstItem="lvs-0E-5P5" firstAttribute="centerX" secondItem="MhP-NZ-mfH" secondAttribute="centerX" id="drV-iQ-Pv7"/>
                                             <constraint firstItem="lvs-0E-5P5" firstAttribute="top" secondItem="MhP-NZ-mfH" secondAttribute="top" id="g8x-eo-2b4"/>
                                         </constraints>
                                     </view>
