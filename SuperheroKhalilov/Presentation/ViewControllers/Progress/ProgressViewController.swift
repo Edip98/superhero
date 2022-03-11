@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ProgressViewController: UIViewController {
+class ProgressViewController: UIViewController, Storyboarded {
     
     var coordinator: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
     }
 }

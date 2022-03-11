@@ -22,9 +22,8 @@ class HomeViewModel {
         case muscles = "MusclesViewController"
     }
     
-    let mainItems = ["Профиль", "Прогресс", "Программы", "Калькулятор", "Мышцы"]
+    let mainItems = ["Profile", "Progress", "Programs", "Calculator", "Muscles"]
     private let viewControllersIDs: [ViewControllersID] = [.profile, .progress, .programs, .calculator, .muscles]
-    
     
     func pushToViewController(at indexPath: IndexPath, coordinator: MainCoordinator?) {
         switch viewControllersIDs[indexPath.row] {

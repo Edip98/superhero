@@ -9,11 +9,8 @@ import UIKit
 
 class MenuTableCell: UITableViewCell {
     
-    
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!
-    
-    let homeViewModel = HomeViewModel()
     
     static let identifier = "MenuTableCell"
     
@@ -23,7 +20,7 @@ class MenuTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        selectionStyle = .none
     }
     
     func configure(with viewModel: Any) {

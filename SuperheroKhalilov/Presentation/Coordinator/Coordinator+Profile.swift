@@ -10,10 +10,9 @@ import Foundation
 extension MainCoordinator {
     
     func presentProfileVC(title: String) {
-        let vc = ProfileViewController()
+        let vc = ProfileViewController.instantiate()
         vc.title = title
         vc.coordinator = self
-        navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
 }

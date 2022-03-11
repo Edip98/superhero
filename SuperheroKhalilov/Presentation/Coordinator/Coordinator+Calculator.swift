@@ -10,10 +10,8 @@ import Foundation
 extension MainCoordinator {
     
     func presentCalculatorVC(title: String) {
-        let vc = CalculatorViewController()
-        vc.title = title
+        let vc = CalculatorViewController.instantiate()
         vc.coordinator = self
-        navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
 }

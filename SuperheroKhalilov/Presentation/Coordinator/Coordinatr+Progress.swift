@@ -10,10 +10,8 @@ import Foundation
 extension MainCoordinator {
     
     func presentProgressVC(title: String) {
-        let vc = ProgressViewController()
-        vc.title = title
+        let vc = ProgressViewController.instantiate()
         vc.coordinator = self
-        navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
 }

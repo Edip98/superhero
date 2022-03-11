@@ -12,17 +12,29 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var homeBackgroundImage: UIImageView!
     @IBOutlet weak var menuTable: UITableView!
+    @IBOutlet weak var homeImageOpacity: UIView!
     
     var coordinator: MainCoordinator?
-    
     var homeViewModel = HomeViewModel()
-    
-    var profileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSexLabel()
         configureBackgroundImages()
+        configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func configureTableView() {
         menuTable.register(MenuTableCell.nib(), forCellReuseIdentifier: MenuTableCell.identifier)
         menuTable.delegate = self
         menuTable.dataSource = self
@@ -30,14 +42,9 @@ class HomeViewController: UIViewController, Storyboarded {
         menuTable.isScrollEnabled = false
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     func configureSexLabel() {
         sexLabel.text = homeViewModel.profile?.sex?.capitalized
-        sexLabel.font = UIFont(name: "Saira-Regular", size: 24)
+        sexLabel.font = UIFont(name: UIFont.sairaRegular, size: 24)
         sexLabel.textAlignment = .center
         sexLabel.textColor = .white
     }
@@ -56,6 +63,7 @@ class HomeViewController: UIViewController, Storyboarded {
             startPoint: .init(x: 0.5, y: 1.0),
             endPoint: .init(x: 0.5, y: 0.0)
         )
+        homeImageOpacity.backgroundColor = .black.withAlphaComponent(0.6)
     }
 }
 
@@ -70,10 +78,6 @@ extension HomeViewController: UITableViewDataSource {
         cell.configure(with: homeViewModel.mainItems[indexPath.row])
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 57
-    }
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -81,6 +85,10 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         homeViewModel.pushToViewController(at: indexPath, coordinator: coordinator)
-        }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 57
+    }
+}
 

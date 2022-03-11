@@ -44,11 +44,11 @@ class StartViewController: UIViewController, Storyboarded {
     
     func configurelabels() {
         superheroLabel.text = startViewModel.superheroLabelText
-        superheroLabel.font = UIFont(name: "Futura Bold", size: 32)
+        superheroLabel.font = UIFont(name: UIFont.FuturaBold , size: 32)
         superheroLabel.textColor = .lightYellow
         
         chooseHeroLabel.text = startViewModel.chooseHeroLabel
-        chooseHeroLabel.font = UIFont(name: "Saira-Regular", size: 16)
+        chooseHeroLabel.font = UIFont(name: UIFont.sairaRegular, size: 16)
         chooseHeroLabel.textColor = .white
         
         superheroLabelView.addBlackGradientLayerInBackground(
