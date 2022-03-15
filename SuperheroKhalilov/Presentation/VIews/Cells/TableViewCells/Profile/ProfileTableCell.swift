@@ -9,11 +9,12 @@ import UIKit
 
 class ProfileTableCell: UITableViewCell {
     
+    @IBOutlet weak var optionLabel: UILabel!
+    
     static let identifier = "ProfileTableCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        //selectionStyle = .none
         backgroundColor = .clear
         textLabel?.textColor = .white
     }

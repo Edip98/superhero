@@ -11,47 +11,59 @@ class ProfileViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var profileBackgroundImage: UIImageView!
     @IBOutlet weak var profileImageOpacity: UIView!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var nameTitle: UILabel!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var textFieldUnderline: UIView!
     @IBOutlet weak var profileTable: UITableView!
-    @IBOutlet weak var selectLabel: UILabel!
     @IBOutlet weak var addOptionsButton: UIButton!
-    @IBOutlet weak var buttonView: UIView!
-    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var addButtonView: UIView!
     
     var coordinator: MainCoordinator?
     var profileViewModel = ProfileViewModel()
+    var profileHeaderView = ProfileHeaderView()
+    var profileFooterView = ProfileFooterView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: profileViewModel.rightBarButtonItemTitle, style: .plain, target: self, action: #selector(saveButtonPressed))
         navigationItem.rightBarButtonItem?.isEnabled = false
         configureBackgroundImage()
-        configureCameraButton()
-        configureNameStack()
-        configureSelectAnOptionLabel()
         configureTableView()
         configureButton()
+        profileHeaderView.nameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        profileHeaderView.nameTextField.text =  profileViewModel.profile?.name
+         
+        if profileHeaderView.nameTextField.hasText {
+            profileHeaderView.textFieldUnderline.backgroundColor = .lightYellow
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        } else {
+            profileHeaderView.textFieldUnderline.backgroundColor = .white
+        }
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if textField.hasText {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+            profileHeaderView.textFieldUnderline.backgroundColor = .lightYellow
+        } else {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+            profileHeaderView.textFieldUnderline.backgroundColor = .white
+        }
     }
     
     @objc func saveButtonPressed() {
+        profileViewModel.profile?.name = profileHeaderView.nameTextField.text
+        ProfileManager.sharedInstance.saveProfile()
+        coordinator?.back()
     }
     
     func configureTableView() {
         profileTable.register(ProfileTableCell.nib(), forCellReuseIdentifier: ProfileTableCell.identifier)
         profileTable.dataSource = self
         profileTable.delegate = self
-        tableHeight.constant = CGFloat(14 * 65)
         profileTable.backgroundColor = .clear
-        profileTable.isScrollEnabled = false
-    }
-    
-    func configureSelectAnOptionLabel() {
-        selectLabel.textColor = .white
-        selectLabel.font = UIFont(name: UIFont.sairaRegular, size: 16)
-        selectLabel.textColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+        profileTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0)
     }
     
     func configureButton() {
@@ -59,30 +71,10 @@ class ProfileViewController: UIViewController, Storyboarded {
         addOptionsButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 16)
         addOptionsButton.layer.cornerRadius = 25
         addOptionsButton.titleLabel?.textColor = .black
-        
-        buttonView.backgroundColor = .black
+
+        addButtonView.backgroundColor = .black
     }
-    
-    func configureNameStack() {
-        nameTitle.text = profileViewModel.nameTitleText
-        nameTitle.textColor = .white
-        nameTitle.font = UIFont(name: UIFont.HelveticaNeue, size: 18)
-        
-        nameTextField.borderStyle = .none
-        nameTextField.backgroundColor = .clear
-        nameTextField.textColor = .white
-        nameTextField.font = UIFont(name: UIFont.HelveticaNeue, size: 18)
-        nameTextField.textAlignment = .left
-        nameTextField.attributedPlaceholder = NSAttributedString(string: profileViewModel.nameTextFieldPlaceholderText, attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)])
-        
-        textFieldUnderline.backgroundColor = .white
-    }
-    
-    func configureCameraButton() {
-        cameraButton.layer.cornerRadius = 8
-        cameraButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
-    }
-    
+
     func configureBackgroundImage() {
         if profileViewModel.profile?.sex == "SUPERMAN" {
             profileBackgroundImage.image = UIImage(named: profileViewModel.supermanBackgroundImageName)
@@ -104,17 +96,33 @@ class ProfileViewController: UIViewController, Storyboarded {
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 14
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = profileTable.dequeueReusableCell(withIdentifier: ProfileTableCell.identifier, for: indexPath) as? ProfileTableCell else { return UITableViewCell() }
-        cell.textLabel?.text = "Row \(indexPath.row)"
+        cell.optionLabel.text = "Option \(indexPath.row)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return profileHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 301
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return profileFooterView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 51
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

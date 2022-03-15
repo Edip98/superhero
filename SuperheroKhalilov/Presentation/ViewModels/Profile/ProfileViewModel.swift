@@ -9,10 +9,8 @@ import Foundation
 
 class ProfileViewModel {
     
+    let profile = ProfileManager.sharedInstance.userProfile
     let supermanBackgroundImageName = "SupermanProfileImage"
     let supergirlBackgroundImageName = "SupergirlProfileImage"
-    let nameTextFieldPlaceholderText = "Enter Your Name"
-    let nameTitleText = "Name"
     let rightBarButtonItemTitle = "Save"
-    let profile = ProfileManager.sharedInstance.userProfile
 }

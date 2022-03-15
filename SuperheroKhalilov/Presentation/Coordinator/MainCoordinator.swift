@@ -33,9 +33,14 @@ class MainCoordinator: Coordinator {
         let vc = HomeViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+        ProfileManager.sharedInstance.fetchProfile()
     }
     
     func back() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func dismiss(animated: Bool) {
+        navigationController.dismiss(animated: animated, completion: nil)
     }
 }

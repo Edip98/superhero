@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var homeBackgroundImage: UIImageView!
     @IBOutlet weak var menuTable: UITableView!
     @IBOutlet weak var homeImageOpacity: UIView!
@@ -19,7 +21,7 @@ class HomeViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSexLabel()
+        configureLabels()
         configureBackgroundImages()
         configureTableView()
     }
@@ -27,6 +29,9 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+        if let name = homeViewModel.profile?.name {
+            nameLabel.text = name
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,11 +47,19 @@ class HomeViewController: UIViewController, Storyboarded {
         menuTable.isScrollEnabled = false
     }
     
-    func configureSexLabel() {
+    func configureLabels() {
         sexLabel.text = homeViewModel.profile?.sex?.capitalized
         sexLabel.font = UIFont(name: UIFont.sairaRegular, size: 24)
         sexLabel.textAlignment = .center
         sexLabel.textColor = .white
+        
+        nameLabel.isHidden = ((homeViewModel.profile?.name?.isEmpty) == nil)
+        nameLabel.textColor = .lightYellow
+        
+        profileImageView.isHidden = true
+        profileImageView.layer.cornerRadius = 8
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.lightYellow.cgColor
     }
     
     func configureBackgroundImages() {

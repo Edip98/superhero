@@ -16,8 +16,28 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3y-nd-kyi">
+                        <rect key="frame" x="43" y="16" width="234" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="1HX-Qo-9OJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J3y-nd-kyi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5j4-f3-fU7"/>
+                    <constraint firstAttribute="trailing" secondItem="J3y-nd-kyi" secondAttribute="trailing" constant="43" id="7ug-g6-ZEG"/>
+                    <constraint firstItem="J3y-nd-kyi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="43" id="Vvd-Hc-Mmj"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="optionLabel" destination="J3y-nd-kyi" id="Nog-qa-ARB"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
         </tableViewCell>
     </objects>

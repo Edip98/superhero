@@ -33,6 +33,7 @@ class ProfileManager {
         userProfile = Profile(entity: entity!, insertInto: mainContext)
         
         userProfile?.sex = sex
+        userProfile?.name = ""
         saveProfile()
     }
     
@@ -45,7 +46,6 @@ class ProfileManager {
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
-    
     
     func fetchProfile() {
         let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
