@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController, Storyboarded {
          
         if profileHeaderView.nameTextField.hasText {
             profileHeaderView.textFieldUnderline.backgroundColor = .lightYellow
-            navigationItem.rightBarButtonItem?.isEnabled = true
+            navigationItem.rightBarButtonItem?.isEnabled = false
         } else {
             profileHeaderView.textFieldUnderline.backgroundColor = .white
         }

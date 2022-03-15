@@ -25,10 +25,10 @@
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rda-lP-siZ">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-Zn-MpQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                        <rect key="frame" x="0.0" y="44" width="428" height="882"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -45,7 +45,6 @@
                                     <constraint firstAttribute="trailing" secondItem="2w2-Zn-MpQ" secondAttribute="trailing" id="tLp-b0-8xQ"/>
                                     <constraint firstItem="wAR-lZ-jam" firstAttribute="leading" secondItem="YqH-lz-GQo" secondAttribute="leading" id="tOa-Zw-Wtg"/>
                                     <constraint firstItem="rda-lP-siZ" firstAttribute="leading" secondItem="YqH-lz-GQo" secondAttribute="leading" id="veV-Qr-RFw"/>
-                                    <constraint firstItem="2w2-Zn-MpQ" firstAttribute="top" secondItem="YqH-lz-GQo" secondAttribute="top" id="xLH-M5-rtR"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5X-LE-yLk">
@@ -81,6 +80,7 @@
                             <constraint firstAttribute="trailing" secondItem="YqH-lz-GQo" secondAttribute="trailing" id="IlQ-dR-aBJ"/>
                             <constraint firstItem="YqH-lz-GQo" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Kft-kK-w7o"/>
                             <constraint firstItem="x5X-LE-yLk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UrG-VL-rc4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="2w2-Zn-MpQ" secondAttribute="top" id="ist-w9-THg"/>
                             <constraint firstAttribute="bottom" secondItem="x5X-LE-yLk" secondAttribute="bottom" id="mrA-wJ-fnj"/>
                             <constraint firstAttribute="bottom" secondItem="YqH-lz-GQo" secondAttribute="bottom" id="nJK-lM-rlU"/>
                         </constraints>
