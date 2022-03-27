@@ -34,6 +34,8 @@ class ProfileManager {
         
         userProfile?.sex = sex
         userProfile?.name = ""
+        userProfile?.parameters = []
+        
         saveProfile()
     }
     

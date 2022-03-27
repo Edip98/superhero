@@ -15,4 +15,13 @@ extension MainCoordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func showParametersViewController(viewModel: ProfileViewModel, viewController: ProfileViewController) {
+        let bodyParameterViewControler = BodyParameterViewController.instantiate()
+        bodyParameterViewControler.viewModel = viewModel
+        bodyParameterViewControler.delegate = viewController
+        bodyParameterViewControler.transitioningDelegate = viewController.transition
+        bodyParameterViewControler.modalPresentationStyle = .custom
+        viewController.present(bodyParameterViewControler, animated: true)
+    }
 }

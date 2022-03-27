@@ -16,7 +16,7 @@ class StartViewModel {
     let supergirlbackgroundImage = "SupergirlStartImage"
     
     let superheroLabelText = "SUPERHERO"
-    let chooseHeroLabel = "chose a hero"
+    let chooseHeroLabel = "choose a hero"
     
     func createProfile(with name: String) {
         ProfileManager.sharedInstance.createDefaultProfile(with: name)

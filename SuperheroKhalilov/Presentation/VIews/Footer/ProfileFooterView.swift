@@ -29,9 +29,10 @@ class ProfileFooterView: UIView {
         contentView.frame = self.bounds
     }
     
-    func configureUI() {
+    private func configureUI() {
+        selectLabel.text = "Select an option to display on the main screen."
         selectLabel.textColor = .white
         selectLabel.font = UIFont(name: UIFont.sairaRegular, size: 16)
-        selectLabel.textColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+        selectLabel.textColor = UIColor.customGray
     }
 }

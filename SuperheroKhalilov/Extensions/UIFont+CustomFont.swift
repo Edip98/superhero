@@ -9,6 +9,7 @@ import UIKit
 
 extension UIFont {
     static let sairaRegular = "Saira-Regular"
-    static let FuturaBold = "Futura Bold"
-    static let HelveticaNeue = "Helvetica-Neue"
+    static let futuraBold = "Futura Bold"
+    static let helveticaNeue = "HelveticaNeue"
+    static let helveticaNeueLight = "HelveticaNeue-Light"
 }
