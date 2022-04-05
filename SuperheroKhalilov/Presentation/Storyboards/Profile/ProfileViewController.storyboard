@@ -20,37 +20,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqH-lz-GQo">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAR-lZ-jam">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rda-lP-siZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-Zn-MpQ">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-Zn-MpQ">
                                         <rect key="frame" x="0.0" y="44" width="428" height="882"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="wAR-lZ-jam" firstAttribute="top" secondItem="YqH-lz-GQo" secondAttribute="top" id="0P7-Yn-GTw"/>
-                                    <constraint firstItem="rda-lP-siZ" firstAttribute="top" secondItem="YqH-lz-GQo" secondAttribute="top" id="1K9-An-0SI"/>
                                     <constraint firstAttribute="bottom" secondItem="2w2-Zn-MpQ" secondAttribute="bottom" id="5Rj-Og-rSi"/>
-                                    <constraint firstAttribute="bottom" secondItem="rda-lP-siZ" secondAttribute="bottom" id="DMc-oV-x6F"/>
-                                    <constraint firstAttribute="trailing" secondItem="rda-lP-siZ" secondAttribute="trailing" id="FJF-A4-Oqp"/>
-                                    <constraint firstAttribute="bottom" secondItem="wAR-lZ-jam" secondAttribute="bottom" id="Jns-s5-wym"/>
-                                    <constraint firstAttribute="trailing" secondItem="wAR-lZ-jam" secondAttribute="trailing" id="lGf-I0-37g"/>
                                     <constraint firstItem="2w2-Zn-MpQ" firstAttribute="leading" secondItem="YqH-lz-GQo" secondAttribute="leading" id="nNQ-ev-rtq"/>
                                     <constraint firstAttribute="trailing" secondItem="2w2-Zn-MpQ" secondAttribute="trailing" id="tLp-b0-8xQ"/>
-                                    <constraint firstItem="wAR-lZ-jam" firstAttribute="leading" secondItem="YqH-lz-GQo" secondAttribute="leading" id="tOa-Zw-Wtg"/>
-                                    <constraint firstItem="rda-lP-siZ" firstAttribute="leading" secondItem="YqH-lz-GQo" secondAttribute="leading" id="veV-Qr-RFw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5X-LE-yLk">
                                 <rect key="frame" x="0.0" y="808" width="428" height="118"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-qV-8Cr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-qV-8Cr" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
                                         <rect key="frame" x="43" y="21" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="10q-rX-7Kn"/>
@@ -60,6 +45,9 @@
                                         <state key="normal" title="Add Options">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addOptionsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kcg-lq-yjb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.10376138245033113" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,9 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="addButtonView" destination="x5X-LE-yLk" id="bXS-on-l5j"/>
-                        <outlet property="addOptionsButton" destination="HrL-qV-8Cr" id="H6F-r4-6Nh"/>
-                        <outlet property="profileBackgroundImage" destination="wAR-lZ-jam" id="7my-SA-bFC"/>
-                        <outlet property="profileImageOpacity" destination="rda-lP-siZ" id="mcz-WH-krg"/>
+                        <outlet property="addOptionsButton" destination="HrL-qV-8Cr" id="hmh-As-0ra"/>
                         <outlet property="profileTable" destination="2w2-Zn-MpQ" id="Mz8-Cp-kwd"/>
                     </connections>
                 </viewController>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgramsViewController: UIViewController, Storyboarded {
+class ProgramsViewController: BaseViewController, Storyboarded {
     
     var coordinator: MainCoordinator?
     

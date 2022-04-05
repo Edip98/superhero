@@ -31,7 +31,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4I-3k-mtL">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-jw-eb5" userLabel="Superman Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-jw-eb5" userLabel="Superman Button" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
                                         <rect key="frame" x="135" y="202" width="144" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="G3Y-bp-AXr"/>
@@ -70,7 +70,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waW-gy-nYZ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV8-Mq-Q5a" userLabel="Supergirl Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV8-Mq-Q5a" userLabel="Supergirl Button" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
                                         <rect key="frame" x="135" y="202" width="144" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hkQ-7d-2Wo"/>

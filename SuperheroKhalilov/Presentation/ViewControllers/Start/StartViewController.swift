@@ -17,12 +17,12 @@ class StartViewController: UIViewController, Storyboarded {
     @IBOutlet weak var chooseHeroLabelView: UIView!
     @IBOutlet weak var superheroLabel: UILabel!
     @IBOutlet weak var chooseHeroLabel: UILabel!
-    @IBOutlet weak var supermanButton: UIButton!
-    @IBOutlet weak var supergirlButton: UIButton!
+    @IBOutlet weak var supermanButton: CustomButton!
+    @IBOutlet weak var supergirlButton: CustomButton!
     
     var coordinator: MainCoordinator?
     
-    var startViewModel = StartViewModel()
+    private var startViewModel = StartViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,13 @@ class StartViewController: UIViewController, Storyboarded {
         coordinator?.start()
     }
     
-    func configurelabels() {
+    private func configurelabels() {
         superheroLabel.text = startViewModel.superheroLabelText
-        superheroLabel.font = UIFont(name: UIFont.FuturaBold , size: 32)
-        superheroLabel.textColor = .lightYellow
+        superheroLabel.font = .font(name: .FuturaBold, size: 32)
+        superheroLabel.textColor = .customYellow
         
         chooseHeroLabel.text = startViewModel.chooseHeroLabel
-        chooseHeroLabel.font = UIFont(name: UIFont.sairaRegular, size: 16)
+        chooseHeroLabel.font = .font(name: .SairaRegular, size: 16)
         chooseHeroLabel.textColor = .white
         
         superheroLabelView.addBlackGradientLayerInBackground(
@@ -79,12 +79,11 @@ class StartViewController: UIViewController, Storyboarded {
     
     func configureButtons() {
         supermanButton.setTitle(startViewModel.maleButtonTitle.uppercased(), for: .normal)
+        supermanButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
+        supermanButton.backgroundColor = .customYellow
+        
         supergirlButton.setTitle(startViewModel.femaleButtonTitle.uppercased(), for: .normal)
-        
-        supermanButton.backgroundColor = .lightYellow
-        supergirlButton.backgroundColor = .lightYellow
-        
-        supermanButton.rounded()
-        supergirlButton.rounded()
+        supergirlButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
+        supergirlButton.backgroundColor = .customYellow
     }
 }

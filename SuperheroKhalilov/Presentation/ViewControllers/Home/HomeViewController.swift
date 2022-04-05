@@ -7,31 +7,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, Storyboarded {
+class HomeViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var homeBackgroundImage: UIImageView!
+    @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var menuTable: UITableView!
-    @IBOutlet weak var homeImageOpacity: UIView!
     
     var coordinator: MainCoordinator?
-    var homeViewModel = HomeViewModel()
+    private var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLabels()
-        configureBackgroundImages()
         configureTableView()
+        configureCollection()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+        homeViewModel.updateViewModel()
+        homeCollectionView.reloadData()
         if let name = homeViewModel.profile?.name {
             nameLabel.text = name
         }
+        configureProfileImageView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,7 +41,28 @@ class HomeViewController: UIViewController, Storyboarded {
         coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)
     }
     
-    func configureTableView() {
+    private func configureProfileImageView() {
+        if let image = ProfileManager.sharedInstance.userProfile?.image {
+            if !image.isEmpty {
+                profileImageView.isHidden = false
+                profileImageView.image = UIImage(data: image)
+                profileImageView.layer.cornerRadius = 8
+                profileImageView.layer.borderWidth = 1
+                profileImageView.layer.borderColor = UIColor.customYellow.cgColor
+                profileImageView.contentMode = .scaleAspectFill
+            } else {
+                profileImageView.isHidden = true
+            }
+        }
+    }
+    
+    private func configureCollection() {
+        homeCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+        homeCollectionView.backgroundColor = .clear
+        homeCollectionView.dataSource = self
+    }
+    
+    private func configureTableView() {
         menuTable.register(MenuTableCell.nib(), forCellReuseIdentifier: MenuTableCell.identifier)
         menuTable.delegate = self
         menuTable.dataSource = self
@@ -47,36 +70,14 @@ class HomeViewController: UIViewController, Storyboarded {
         menuTable.isScrollEnabled = false
     }
     
-    func configureLabels() {
+    private func configureLabels() {
         sexLabel.text = homeViewModel.profile?.sex?.capitalized
-        sexLabel.font = UIFont(name: UIFont.sairaRegular, size: 24)
+        sexLabel.font = .font(name: .SairaRegular, size: 24)
         sexLabel.textAlignment = .center
         sexLabel.textColor = .white
         
         nameLabel.isHidden = ((homeViewModel.profile?.name?.isEmpty) == nil)
-        nameLabel.textColor = .lightYellow
-        
-        profileImageView.isHidden = true
-        profileImageView.layer.cornerRadius = 8
-        profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.lightYellow.cgColor
-    }
-    
-    func configureBackgroundImages() {
-        if sexLabel.text == "Superman" {
-            homeBackgroundImage.image = UIImage(named: homeViewModel.supermanBackgroundImageName)
-        } else {
-            homeBackgroundImage.image = UIImage(named: homeViewModel.supergirlBackgroundImageName)
-        }
-        
-        homeBackgroundImage.contentMode = .scaleToFill
-        homeBackgroundImage.addBlackGradientLayerInForeground(
-            frame: homeBackgroundImage.bounds,
-            colors: [.black.withAlphaComponent(1), .black.withAlphaComponent(0.8), .black.withAlphaComponent(0.0)],
-            startPoint: .init(x: 0.5, y: 1.0),
-            endPoint: .init(x: 0.5, y: 0.0)
-        )
-        homeImageOpacity.backgroundColor = .black.withAlphaComponent(0.6)
+        nameLabel.textColor = .customYellow
     }
 }
 
@@ -97,7 +98,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        homeViewModel.pushToViewController(at: indexPath, coordinator: coordinator)
+        homeViewModel.pushToViewController(at: indexPath, coordinator: coordinator, viewController: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -105,3 +106,15 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeViewModel.bodyParameterViewModel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
+        cell.configure(with: homeViewModel.bodyParameterViewModel[indexPath.row])
+        return cell
+    }
+}

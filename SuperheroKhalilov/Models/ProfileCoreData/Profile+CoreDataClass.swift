@@ -2,7 +2,7 @@
 //  Profile+CoreDataClass.swift
 //  SuperheroKhalilov
 //
-//  Created by Эдип on 15.03.2022.
+//  Created by Эдип on 02.04.2022.
 //
 //
 

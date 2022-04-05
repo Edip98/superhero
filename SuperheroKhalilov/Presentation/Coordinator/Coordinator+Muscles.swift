@@ -12,6 +12,7 @@ extension MainCoordinator {
     func presentMusclesVC(title: String) {
         let vc = MusclesViewController.instantiate()
         vc.coordinator = self
+        vc.title = title
         navigationController.pushViewController(vc, animated: true)
     }
 }

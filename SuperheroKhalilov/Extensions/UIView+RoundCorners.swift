@@ -1,0 +1,18 @@
+//
+//  UIView+RoundCorners.swift
+//  SuperheroKhalilov
+//
+//  Created by Эдип on 31.03.2022.
+//
+
+import UIKit
+
+extension UIView {
+    
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}

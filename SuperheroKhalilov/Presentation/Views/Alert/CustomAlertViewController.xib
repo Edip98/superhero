@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlertViewController" customModule="SuperheroKhalilov" customModuleProvider="target">
+            <connections>
+                <outlet property="alertImageView" destination="pEx-6T-8P8" id="mEU-Dq-Kuh"/>
+                <outlet property="alertTextLabel" destination="DEH-mT-r7r" id="b0M-hI-wKr"/>
+                <outlet property="alertView" destination="i5M-Pr-FkT" id="0IK-sa-fI3"/>
+                <outlet property="contentView" destination="3UT-d6-4Wt" id="CsG-bQ-BYa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-d6-4Wt">
+                    <rect key="frame" x="43" y="369" width="328" height="157"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile has been saved!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEH-mT-r7r">
+                            <rect key="frame" x="58" y="19" width="250" height="119"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetailAccessory" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-6T-8P8">
+                            <rect key="frame" x="20" y="66.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="88O-M2-ART"/>
+                                <constraint firstAttribute="height" constant="24" id="OaI-op-HAN"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DEH-mT-r7r" firstAttribute="top" secondItem="3UT-d6-4Wt" secondAttribute="top" constant="19" id="1lo-tg-ixL"/>
+                        <constraint firstItem="pEx-6T-8P8" firstAttribute="leading" secondItem="3UT-d6-4Wt" secondAttribute="leading" constant="20" id="9qM-IU-8Jh"/>
+                        <constraint firstAttribute="bottom" secondItem="DEH-mT-r7r" secondAttribute="bottom" constant="19" id="EBo-ad-X5U"/>
+                        <constraint firstItem="pEx-6T-8P8" firstAttribute="centerY" secondItem="3UT-d6-4Wt" secondAttribute="centerY" id="PBb-tC-KZL"/>
+                        <constraint firstAttribute="trailing" secondItem="DEH-mT-r7r" secondAttribute="trailing" constant="20" id="ezF-W8-2e9"/>
+                        <constraint firstItem="DEH-mT-r7r" firstAttribute="leading" secondItem="pEx-6T-8P8" secondAttribute="trailing" constant="14" id="oYV-kd-KqS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3UT-d6-4Wt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="369" id="8AP-6m-VGV"/>
+                <constraint firstItem="3UT-d6-4Wt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="43" id="BXB-Mm-jf1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3UT-d6-4Wt" secondAttribute="trailing" constant="43" id="cEY-sZ-bXh"/>
+                <constraint firstAttribute="bottom" secondItem="3UT-d6-4Wt" secondAttribute="bottom" constant="370" id="l0e-Er-RoY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-388.40579710144931" y="-39.508928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DetailAccessory" width="21" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

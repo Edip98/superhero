@@ -8,7 +8,17 @@
 import UIKit
 
 extension UIFont {
-    static let sairaRegular = "Saira-Regular"
-    static let FuturaBold = "Futura Bold"
-    static let HelveticaNeue = "Helvetica-Neue"
+    
+    enum FontName: String {
+        case SairaRegular = "Saira-Regular"
+        case SairaMedium = "Saira-Medium"
+        case FuturaBold = "Futura Bold"
+        case HelveticaNeue = "HelveticaNeue"
+        case HelveticaNeueLight = "HelveticaNeue-Light"
+        case GilroySemibold = "Gilroy-Semibold"
+    }
+    
+    static func font(name: FontName, size: CGFloat) -> UIFont? {
+        return UIFont(name: name.rawValue, size: size)
+    }
 }
