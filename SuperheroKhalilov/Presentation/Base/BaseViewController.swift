@@ -9,4 +9,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    private let baseViewModel = BaseViewModel()
+    
 }

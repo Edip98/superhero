@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var homeImageOpacity: UIView!
     
     var coordinator: MainCoordinator?
-    var homeViewModel = HomeViewModel()
+    private var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,16 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+        
         if let name = homeViewModel.profile?.name {
             nameLabel.text = name
+        }
+        
+        if let image = ProfileManager.sharedInstance.userProfile?.image {
+            profileImageView.isHidden = false
+            profileImageView.image = UIImage(data: image)
+        } else {
+            profileImageView.isHidden = true
         }
     }
     
@@ -39,7 +47,7 @@ class HomeViewController: UIViewController, Storyboarded {
         coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         menuTable.register(MenuTableCell.nib(), forCellReuseIdentifier: MenuTableCell.identifier)
         menuTable.delegate = self
         menuTable.dataSource = self
@@ -47,22 +55,22 @@ class HomeViewController: UIViewController, Storyboarded {
         menuTable.isScrollEnabled = false
     }
     
-    func configureLabels() {
+    private func configureLabels() {
         sexLabel.text = homeViewModel.profile?.sex?.capitalized
         sexLabel.font = UIFont(name: UIFont.sairaRegular, size: 24)
         sexLabel.textAlignment = .center
         sexLabel.textColor = .white
         
         nameLabel.isHidden = ((homeViewModel.profile?.name?.isEmpty) == nil)
-        nameLabel.textColor = .lightYellow
+        nameLabel.textColor = .customYellow
         
-        profileImageView.isHidden = true
         profileImageView.layer.cornerRadius = 8
         profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.lightYellow.cgColor
+        profileImageView.layer.borderColor = UIColor.customYellow.cgColor
+        profileImageView.contentMode = .scaleAspectFill
     }
     
-    func configureBackgroundImages() {
+    private func configureBackgroundImages() {
         if sexLabel.text == "Superman" {
             homeBackgroundImage.image = UIImage(named: homeViewModel.supermanBackgroundImageName)
         } else {

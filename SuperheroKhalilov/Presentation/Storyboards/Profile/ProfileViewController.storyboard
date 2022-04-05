@@ -50,7 +50,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5X-LE-yLk">
                                 <rect key="frame" x="0.0" y="808" width="428" height="118"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-qV-8Cr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-qV-8Cr" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
                                         <rect key="frame" x="43" y="21" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="10q-rX-7Kn"/>
@@ -60,6 +60,9 @@
                                         <state key="normal" title="Add Options">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addOptionsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kcg-lq-yjb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.10376138245033113" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +90,7 @@
                     </view>
                     <connections>
                         <outlet property="addButtonView" destination="x5X-LE-yLk" id="bXS-on-l5j"/>
-                        <outlet property="addOptionsButton" destination="HrL-qV-8Cr" id="H6F-r4-6Nh"/>
+                        <outlet property="addOptionsButton" destination="HrL-qV-8Cr" id="hmh-As-0ra"/>
                         <outlet property="profileBackgroundImage" destination="wAR-lZ-jam" id="7my-SA-bFC"/>
                         <outlet property="profileImageOpacity" destination="rda-lP-siZ" id="mcz-WH-krg"/>
                         <outlet property="profileTable" destination="2w2-Zn-MpQ" id="Mz8-Cp-kwd"/>

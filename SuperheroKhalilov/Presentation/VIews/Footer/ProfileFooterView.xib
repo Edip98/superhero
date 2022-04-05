@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfo-2I-Mse">
-                    <rect key="frame" x="43" y="0.0" width="469" height="51"/>
+                    <rect key="frame" x="20" y="0.0" width="515" height="51"/>
                     <string key="text">Select an option to display on the 
 main screen.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,8 +31,8 @@ main screen.</string>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Zfo-2I-Mse" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="43" id="Aqn-fT-die"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zfo-2I-Mse" secondAttribute="trailing" constant="43" id="Zoi-PL-78J"/>
+                <constraint firstItem="Zfo-2I-Mse" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Aqn-fT-die"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zfo-2I-Mse" secondAttribute="trailing" constant="20" id="Zoi-PL-78J"/>
                 <constraint firstAttribute="bottom" secondItem="Zfo-2I-Mse" secondAttribute="bottom" id="eyM-D9-T3J"/>
                 <constraint firstItem="Zfo-2I-Mse" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yrE-8z-jYo"/>
             </constraints>
