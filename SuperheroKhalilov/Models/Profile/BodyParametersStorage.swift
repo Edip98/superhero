@@ -37,6 +37,8 @@ class BodyParametersStorage {
             param.bodyPart = bodyPartsName
             param.isSelected = false
             param.value = 0
+            param.changeValue = 0
+            param.isOn = false
             return param
         })
     }

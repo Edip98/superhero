@@ -2,7 +2,7 @@
 //  BodyParameter+CoreDataClass.swift
 //  SuperheroKhalilov
 //
-//  Created by Эдип on 27.03.2022.
+//  Created by Эдип on 02.04.2022.
 //
 //
 

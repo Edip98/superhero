@@ -47,12 +47,12 @@ class BodyParameterViewController: UIViewController, Storyboarded {
         parametersTableView.backgroundColor = .black
         
         selectOptionLabel.textColor = .customYellow
-        selectOptionLabel.font = UIFont(name: UIFont.sairaRegular, size: 18)
+        selectOptionLabel.font = .font(name: .SairaRegular, size: 18)
         
         cancelButton.setTitleColor(.white, for: .normal)
-        cancelButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 18)
+        cancelButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
         
-        selectButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 18)
+        selectButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
         selectButton.setTitleColor(.customYellow, for: .normal)
     }
     

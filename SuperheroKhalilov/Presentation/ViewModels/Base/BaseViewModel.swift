@@ -8,5 +8,9 @@
 import Foundation
 
 class BaseViewModel {
+    
+    let supermanBackgroundImageName = "SupermanHomeImage"
+    let supergirlBackgroundImageName = "SupergirlHomeImage"
+    let superman = "SUPERMAN"
 
 }

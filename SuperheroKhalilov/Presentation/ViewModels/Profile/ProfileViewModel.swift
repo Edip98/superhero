@@ -9,20 +9,31 @@ import Foundation
 import UIKit
 
 class ProfileViewModel {
-    
-    let supermanBackgroundImageName = "SupermanProfileImage"
-    let supergirlBackgroundImageName = "SupergirlProfileImage"
+
     let rightBarButtonItemTitle = "Save"
-    let headerNameTitleText = "Name"
+
     let addParametersButtonText = "Add options"
     
-    let profile = ProfileManager.sharedInstance.userProfile!
+    let defaultCameraImage = "Camera"
+    let headerNameTitle = "Name"
+    let headerNameTitleText = "Name"
+    let headerNamePlaceholder = "Enter Your Name"
+    
+    let footerSelectLabel = "Select an option to display on the main screen."
+    
+    let alertTitle = "Profile has been saved!"
+    let alertImage = "CheckmarkAccessory"
+    let alertTitleNumberOfLines: Int = 1
+    let opacity: UIColor = .black.withAlphaComponent(0.65)
+    let alertTimeInterval: Double = 2
+    
+    let profile = ProfileManager.sharedInstance.userProfile
     var profileName: String?
     
     var bodyParametersStorage = BodyParametersStorage()
     
     var bodyParameteresViewModel = [BodyParameterViewModel]()
-    private var parameterList: [BodyParameter] = []
+    var parameterList: [BodyParameter] = []
     
     var selectedParameterViewModel = [BodyParameterViewModel]()
     
@@ -32,9 +43,10 @@ class ProfileViewModel {
     }
     
     func fetchParameters() {
-        profileName = profile.name
+        profileName = profile?.name
         bodyParameteresViewModel = bodyParametersStorage.fetchProfileParametersViewModel()
-        parameterList = Array(_immutableCocoaArray: profile.parameters!)
+        guard let parameters = profile?.parameters else { return }
+        parameterList = Array(_immutableCocoaArray: parameters)
         
         if !parameterList.isEmpty {
             selectedParameterViewModel = parameterList.map({ parameters in
@@ -65,15 +77,15 @@ class ProfileViewModel {
     
     func remove(at index: Int) {
         selectedParameterViewModel.remove(at: index)
+        let removedElement = bodyParameteresViewModel[index]
+        removedElement.isSelected.toggle()
     }
     
     func check() {
-      
         for viewModel in selectedParameterViewModel {
-            if let model = bodyParametersStorage.parametersList.first(where: { $0.bodyPart == viewModel.bodyPart }) {
-                model.isSelected = false
+            if let model = bodyParameteresViewModel.first(where: { $0.bodyPart == viewModel.bodyPart }) {
+                model.isSelected = true
             }
-        
         }
     }
     
@@ -85,11 +97,13 @@ class ProfileViewModel {
                 model.bodyPart = viewModel.bodyPart
                 model.isSelected = viewModel.isSelected
                 model.value = viewModel.value
+                model.changeValue = viewModel.changeValue
+                model.isOn = viewModel.isOn
                 
                 params.append(model)
             }
         }
-        profile.parameters = NSOrderedSet(array: params)
+        profile?.parameters = NSOrderedSet(array: params)
         ProfileManager.sharedInstance.saveProfile()
     }
 }
