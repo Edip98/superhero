@@ -9,11 +9,11 @@ import UIKit
 
 protocol ProfileTableCellDelegate: AnyObject {
     func shouldChangeCharactersIn()
-    func textFieldShouldReturn(textField: UITextField, bodyParameterViewModel: BodyParameterViewModel)
+    func textFieldShouldReturn(textField: UITextField)
     func switchToggle(parameterSwitch: UISwitch, textFieldUnderLineView: UIView, bodyParameterViewModel: BodyParameterViewModel)
     func keyboardWillShow(sender: NSNotification)
     func keyboardWillHide(sender: NSNotification)
-    func checkTextFieldsValue(textField: UITextField, textFieldUnderLine: UIView, index: Int)
+    func checkTextFieldsValue(textField: UITextField, textFieldUnderLine: UIView, index: Int, bodyParameterViewModel: BodyParameterViewModel)
 }
 
 class ProfileTableCell: UITableViewCell {
@@ -58,15 +58,15 @@ class ProfileTableCell: UITableViewCell {
         parameterLabel.text = viewModel.bodyPart
         valueTextField.text = String(viewModel.value)
         parameterSwitch.isOn = viewModel.isOn
+        
+        if parameterLabel.text == "Weight" {
+            measurementLabel.text = "kg"
+        }
     }
     
     private func configureParameterLabel() {
         parameterLabel.textColor = .white
         parameterLabel.numberOfLines = 2
-
-        if parameterLabel.text == "Weight" {
-            measurementLabel.text = "kg"
-        }
     }
     
     private func configureMeasurementLabel() {
@@ -114,7 +114,7 @@ class ProfileTableCell: UITableViewCell {
     }
     
     @objc func checkTextFieldsValue() {
-        delegate.checkTextFieldsValue(textField: valueTextField, textFieldUnderLine: textFieldUnderLineView, index: valueTextField.tag)
+        delegate.checkTextFieldsValue(textField: valueTextField, textFieldUnderLine: textFieldUnderLineView, index: valueTextField.tag, bodyParameterViewModel: bodyParameterViewModel)
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
@@ -134,8 +134,13 @@ extension ProfileTableCell: UITextFieldDelegate {
         }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        bodyParameterViewModel.addValue(Int(textField.text ?? "") ?? 0)
+        bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        delegate.textFieldShouldReturn(textField: valueTextField, bodyParameterViewModel: bodyParameterViewModel)
+        delegate.textFieldShouldReturn(textField: valueTextField)
         endEditing(true)
         return true
     }

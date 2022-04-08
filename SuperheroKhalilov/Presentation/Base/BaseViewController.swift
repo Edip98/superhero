@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, Storyboarded {
     
     let backgroundImageView = UIImageView()
     let backgroundImageOpacityView = UIView()

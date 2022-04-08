@@ -28,7 +28,6 @@ class ProfileViewModel {
     let alertTimeInterval: Double = 2
     
     let profile = ProfileManager.sharedInstance.userProfile
-    var profileName: String?
     
     var bodyParametersStorage = BodyParametersStorage()
     
@@ -43,7 +42,6 @@ class ProfileViewModel {
     }
     
     func fetchParameters() {
-        profileName = profile?.name
         bodyParameteresViewModel = bodyParametersStorage.fetchProfileParametersViewModel()
         guard let parameters = profile?.parameters else { return }
         parameterList = Array(_immutableCocoaArray: parameters)
@@ -99,6 +97,8 @@ class ProfileViewModel {
                 model.value = viewModel.value
                 model.changeValue = viewModel.changeValue
                 model.isOn = viewModel.isOn
+                model.dateArray = viewModel.dateArray
+                model.valueArray = viewModel.valueArray
                 
                 params.append(model)
             }

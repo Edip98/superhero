@@ -39,6 +39,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         valueLabel.text = String(viewModel.value)
         changeValueLabel.text = viewModel.changeValueText
         circleView.backgroundColor = viewModel.color
+        
+        if parameterLabel.text == "Weight" {
+            measurementLabel.text = "kg"
+        }
     }
     
     private func configureUI() {
@@ -48,10 +52,5 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
         changeValueLabel.textColor = .white
         changeValueLabel.font = .font(name: .GilroySemibold, size: 12)
-        
-        if parameterLabel.text == "Weight" {
-            measurementLabel.text = "kg"
-        }
     }
-
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgressViewController: BaseViewController, Storyboarded {
+class ProgressViewController: BaseViewController {
     
     @IBOutlet weak var progressTableView: UITableView!
     
@@ -33,7 +33,7 @@ extension ProgressViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if progressViewModel.profile?.parameters?.count == 0 {
-            progressViewModel.presentProgressAlert(view: self.view)
+            progressViewModel.presentProgressAlertView(view: self.view)
         }
         return progressViewModel.bodyParameterViewModel.count
     }
@@ -48,8 +48,10 @@ extension ProgressViewController: UITableViewDataSource {
 extension ProgressViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let title = progressViewModel.bodyParameterViewModel[indexPath.row].bodyPart ?? ""
-        coordinator?.presentProgressChartVC(title: title + " " + progressViewModel.chart, bodyName: title)
+        guard let title = progressViewModel.bodyParameterViewModel[indexPath.row].bodyPart else { return }
+        guard let date = progressViewModel.bodyParameterViewModel[indexPath.row].dateArray.first else { return }
+        let array = [progressViewModel.bodyParameterViewModel[indexPath.row]]
+        coordinator?.presentProgressChartVC(title: title + " " + progressViewModel.chart, bodyName: title + ",", date: date, viewModel: array)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -39,6 +39,8 @@ class BodyParametersStorage {
             param.value = 0
             param.changeValue = 0
             param.isOn = false
+            param.dateArray = []
+            param.valueArray = []
             return param
         })
     }

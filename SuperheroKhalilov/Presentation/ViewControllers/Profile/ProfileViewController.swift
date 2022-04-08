@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController, Storyboarded {
+class ProfileViewController: BaseViewController {
     
     @IBOutlet weak var profileTable: UITableView!
     @IBOutlet weak var addOptionsButton: CustomButton!
@@ -119,23 +119,21 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ProfileViewController: ProfileTableCellDelegate {
     
-    func checkTextFieldsValue(textField: UITextField, textFieldUnderLine: UIView, index: Int) {
+    func checkTextFieldsValue(textField: UITextField, textFieldUnderLine: UIView, index: Int, bodyParameterViewModel: BodyParameterViewModel) {
         
         tagsList.append(index)
-
+        
         if textField.text == "0" {
             textFieldUnderLine.backgroundColor = .red
             tagsList.removeAll()
         } else if tagsList.count == profileViewModel.selectedParameterViewModel.count || profileViewModel.selectedParameterViewModel.count == 0 {
+            bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
             saveParametersAndBack()
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField, bodyParameterViewModel: BodyParameterViewModel) {
-        bodyParameterViewModel.calculateProgress(Int(textField.text ?? "") ?? 0)
-        bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
+    func textFieldShouldReturn(textField: UITextField) {
         navigationItem.rightBarButtonItem?.isEnabled = false
-        
         if textField.text == "" {
             textField.text = "0"
         } else if textField.hasText {
@@ -149,7 +147,7 @@ extension ProfileViewController: ProfileTableCellDelegate {
     
     func switchToggle(parameterSwitch: UISwitch, textFieldUnderLineView: UIView, bodyParameterViewModel: BodyParameterViewModel) {
         bodyParameterViewModel.isOn = parameterSwitch.isOn
-        navigationItem.rightBarButtonItem?.isEnabled = true    
+        navigationItem.rightBarButtonItem?.isEnabled = true
         if !parameterSwitch.isOn {
             textFieldUnderLineView.backgroundColor = .customGray
         } else {

@@ -16,9 +16,9 @@ class ProgressViewModel {
     let alertImageName = "DetailAccessory"
     
     let measurementLabelText = "cm"
-    let chart = "Chart"
-    let textLabelText = "Displaying dynamics relative to data from \("31.03.2021")"
-    
+    var chart = "Chart"
+    let textLabelText = "Displaying dynamics relative to data from"
+
     var bodyParameterEntity = [BodyParameter]()
     var bodyParameterViewModel = [BodyParameterViewModel]()
     
@@ -26,16 +26,36 @@ class ProgressViewModel {
         fetchParameters()
     }
     
+    func createDataEntries() -> [BarChartEntry] {
+        
+        bodyParameterViewModel.map { parameter in
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM"
+            let date = formatter.string(from: parameter.dateArray.first ?? Date())
+            
+            return BarChartEntry(
+                progressValue: parameter.changeValueText,
+                progressBackgroundColor: parameter.color,
+                value: String(parameter.value),
+                height: Float(parameter.value),
+                color: .customYellow,
+                date: date)
+        }
+    }
+
     func fetchParameters() {
         guard let parameters = profile?.parameters else { return }
         bodyParameterEntity = Array(_immutableCocoaArray: parameters)
-        bodyParameterViewModel = bodyParameterEntity.filter { $0.isOn }
+        bodyParameterViewModel = bodyParameterEntity.filter { $0.isSelected }
         .map { BodyParameterViewModel(model: $0) }
     }
     
-    func presentProgressAlert(view: UIView) {
+    func presentProgressAlertView(view: UIView) {
         let myView = ProgressAlertView()
         myView.center = view.center
         view.addSubview(myView)
     }
 }
+
+
+

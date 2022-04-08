@@ -13,6 +13,7 @@ class HomeViewModel {
     
     var bodyParameterEntity = [BodyParameter]()
     var bodyParameterViewModel = [BodyParameterViewModel]()
+    
 
     enum ViewControllersID: String {
         case profile = "ProfileViewController"

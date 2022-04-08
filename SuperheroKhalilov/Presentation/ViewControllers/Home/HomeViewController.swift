@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController, Storyboarded {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!

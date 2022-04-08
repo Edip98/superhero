@@ -2,7 +2,7 @@
 //  BodyParameter+CoreDataProperties.swift
 //  SuperheroKhalilov
 //
-//  Created by Эдип on 02.04.2022.
+//  Created by Эдип on 06.04.2022.
 //
 //
 
@@ -18,9 +18,11 @@ extension BodyParameter {
 
     @NSManaged public var bodyPart: String?
     @NSManaged public var changeValue: Int16
+    @NSManaged public var dateArray: [Date]
+    @NSManaged public var isOn: Bool
     @NSManaged public var isSelected: Bool
     @NSManaged public var value: Int16
-    @NSManaged public var isOn: Bool
+    @NSManaged public var valueArray: [Int16]
     @NSManaged public var profile: Profile?
 
 }
