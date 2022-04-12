@@ -16,9 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-3r-zFK">
+                                <rect key="frame" x="43" y="153" width="328" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CYc-3r-zFK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="109" id="CVJ-8U-aei"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CYc-3r-zFK" secondAttribute="bottom" id="QAQ-X1-UzK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CYc-3r-zFK" secondAttribute="trailing" constant="43" id="bP4-XO-5HF"/>
+                            <constraint firstItem="CYc-3r-zFK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="43" id="lRb-nl-uYG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressTableView" destination="CYc-3r-zFK" id="W6g-Q4-tye"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

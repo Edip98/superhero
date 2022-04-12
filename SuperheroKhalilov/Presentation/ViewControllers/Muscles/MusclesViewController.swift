@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MusclesViewController: UIViewController, Storyboarded {
+class MusclesViewController: BaseViewController {
     
     var coordinator: MainCoordinator?
     

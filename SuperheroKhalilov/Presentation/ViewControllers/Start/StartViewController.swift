@@ -44,11 +44,11 @@ class StartViewController: UIViewController, Storyboarded {
     
     private func configurelabels() {
         superheroLabel.text = startViewModel.superheroLabelText
-        superheroLabel.font = UIFont(name: UIFont.futuraBold , size: 32)
+        superheroLabel.font = .font(name: .FuturaBold, size: 32)
         superheroLabel.textColor = .customYellow
         
         chooseHeroLabel.text = startViewModel.chooseHeroLabel
-        chooseHeroLabel.font = UIFont(name: UIFont.sairaRegular, size: 16)
+        chooseHeroLabel.font = .font(name: .SairaRegular, size: 16)
         chooseHeroLabel.textColor = .white
         
         superheroLabelView.addBlackGradientLayerInBackground(
@@ -79,11 +79,11 @@ class StartViewController: UIViewController, Storyboarded {
     
     func configureButtons() {
         supermanButton.setTitle(startViewModel.maleButtonTitle.uppercased(), for: .normal)
-        supermanButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 18)
+        supermanButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
         supermanButton.backgroundColor = .customYellow
         
         supergirlButton.setTitle(startViewModel.femaleButtonTitle.uppercased(), for: .normal)
-        supergirlButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 18)
+        supergirlButton.titleLabel?.font = .font(name: .SairaRegular, size: 18)
         supergirlButton.backgroundColor = .customYellow
     }
 }

@@ -40,12 +40,13 @@ class ProfileManager {
     }
     
     func saveProfile() {
-        guard mainContext.hasChanges else { return }
-        
-        do {
-            try mainContext.save()
-        } catch let nserror as NSError {
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+//        guard mainContext.hasChanges else { return }
+        if mainContext.hasChanges {
+            do {
+                try mainContext.save()
+            } catch let nserror as NSError {
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
     }
     

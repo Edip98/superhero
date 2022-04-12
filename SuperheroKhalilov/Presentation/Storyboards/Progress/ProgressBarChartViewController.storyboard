@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Progress Bar Chart View Controller-->
+        <scene sceneID="rFf-aa-Wc5">
+            <objects>
+                <viewController storyboardIdentifier="ProgressBarChartViewController" id="ci8-qW-Lju" customClass="ProgressBarChartViewController" customModule="SuperheroKhalilov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKd-CV-h8S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-Pn-FSQ">
+                                <rect key="frame" x="36" y="112" width="343" height="133"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displaying dynamics relative to data from 31.03.2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-S5-836">
+                                        <rect key="frame" x="0.0" y="73" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xf-EM-8J9">
+                                        <rect key="frame" x="134" y="24" width="75" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="right" secondItem="8xf-S5-836" secondAttribute="right" id="6E1-Aq-daT"/>
+                                    <constraint firstItem="5xf-EM-8J9" firstAttribute="centerX" secondItem="mPV-Pn-FSQ" secondAttribute="centerX" id="WfN-hu-VVh"/>
+                                    <constraint firstItem="5xf-EM-8J9" firstAttribute="top" secondItem="mPV-Pn-FSQ" secondAttribute="top" constant="24" id="cAs-Xc-shn"/>
+                                    <constraint firstAttribute="bottom" secondItem="8xf-S5-836" secondAttribute="bottom" constant="19" id="dI4-we-O3A"/>
+                                    <constraint firstItem="8xf-S5-836" firstAttribute="leading" secondItem="mPV-Pn-FSQ" secondAttribute="leading" id="syN-2Y-0Ok"/>
+                                    <constraint firstItem="8xf-S5-836" firstAttribute="top" secondItem="5xf-EM-8J9" secondAttribute="bottom" constant="20" id="yla-FS-X5g"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vG-tT-39A" customClass="BarChartView" customModule="SuperheroKhalilov" customModuleProvider="target">
+                                <rect key="frame" x="44" y="293" width="326" height="521"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OEc-2T-C7j"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="0vG-tT-39A" secondAttribute="bottom" constant="48" id="9Oz-jO-jWP"/>
+                            <constraint firstItem="mPV-Pn-FSQ" firstAttribute="leading" secondItem="ZKd-CV-h8S" secondAttribute="leading" constant="36" id="EFC-nL-5sb"/>
+                            <constraint firstItem="0vG-tT-39A" firstAttribute="leading" secondItem="ZKd-CV-h8S" secondAttribute="leadingMargin" constant="24" id="MDU-zU-Uyf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0vG-tT-39A" secondAttribute="trailing" constant="24" id="SPU-8M-25E"/>
+                            <constraint firstAttribute="trailing" secondItem="mPV-Pn-FSQ" secondAttribute="trailing" constant="35" id="tZd-yj-aXB"/>
+                            <constraint firstItem="mPV-Pn-FSQ" firstAttribute="top" secondItem="ZKd-CV-h8S" secondAttribute="top" constant="112" id="xBB-XY-AEZ"/>
+                            <constraint firstItem="0vG-tT-39A" firstAttribute="top" secondItem="mPV-Pn-FSQ" secondAttribute="bottom" constant="48" id="xs9-Jz-N4y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="0vG-tT-39A" id="dwa-U3-WjO"/>
+                        <outlet property="bodyNameLabel" destination="5xf-EM-8J9" id="lB3-TS-J8k"/>
+                        <outlet property="descriptionLabel" destination="8xf-S5-836" id="ey8-5K-YtX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwy-oX-u3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

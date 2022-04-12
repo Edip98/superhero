@@ -14,6 +14,7 @@ class MainCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.navigationBar.tintColor = .customYellow
+        navigationController.navigationBar.barTintColor = .clear
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
@@ -33,7 +34,6 @@ class MainCoordinator: Coordinator {
         let vc = HomeViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
-        ProfileManager.sharedInstance.fetchProfile()
     }
     
     func back() {

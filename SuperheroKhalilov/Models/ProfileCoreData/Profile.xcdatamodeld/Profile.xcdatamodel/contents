@@ -2,8 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BodyParameter" representedClassName="BodyParameter" syncable="YES">
         <attribute name="bodyPart" optional="YES" attributeType="String"/>
+        <attribute name="changeValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateArray" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Date]"/>
+        <attribute name="isOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isSelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="valueArray" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Int]"/>
         <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="parameters" inverseEntity="Profile"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
@@ -13,7 +16,7 @@
         <relationship name="parameters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BodyParameter" inverseName="profile" inverseEntity="BodyParameter"/>
     </entity>
     <elements>
-        <element name="BodyParameter" positionX="-55.3984375" positionY="-84.703125" width="128" height="89"/>
-        <element name="Profile" positionX="173.91015625" positionY="-16.796875" width="128" height="89"/>
+        <element name="BodyParameter" positionX="-9" positionY="36" width="128" height="134"/>
+        <element name="Profile" positionX="-9" positionY="36" width="128" height="89"/>
     </elements>
 </model>

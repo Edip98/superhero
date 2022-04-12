@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController, Storyboarded {
+class CalculatorViewController: BaseViewController {
     
     var coordinator: MainCoordinator?
     

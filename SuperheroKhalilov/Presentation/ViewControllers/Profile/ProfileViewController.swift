@@ -7,10 +7,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, Storyboarded {
+class ProfileViewController: BaseViewController {
     
-    @IBOutlet weak var profileBackgroundImage: UIImageView!
-    @IBOutlet weak var profileImageOpacity: UIView!
     @IBOutlet weak var profileTable: UITableView!
     @IBOutlet weak var addOptionsButton: CustomButton!
     @IBOutlet weak var addButtonView: UIView!
@@ -20,46 +18,24 @@ class ProfileViewController: UIViewController, Storyboarded {
     var profileHeaderView = ProfileHeaderView()
     var profileFooterView = ProfileFooterView()
     
-    private var bodyParameterViewModel: BodyParameterViewModel?
-    
     let transition = PanelTransition()
+    
+    var tagsList = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: profileViewModel.rightBarButtonItemTitle, style: .plain, target: self, action: #selector(saveButtonPressed))
         navigationItem.rightBarButtonItem?.isEnabled = false
-        configureBackgroundImage()
         configureTableView()
         configureButton()
         profileHeaderView.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        profileHeaderView.nameTextField.text = profileViewModel.profileName
-    }
-    
     @objc func saveButtonPressed() {
-        profileViewModel.profile.name = profileHeaderView.nameTextField.text
-        profileViewModel.saveParameters()
-        coordinator?.back()
-    }
-    
-    func configureBackgroundImage() {
-        if profileViewModel.profile.sex == "SUPERMAN" {
-            profileBackgroundImage.image = UIImage(named: profileViewModel.supermanBackgroundImageName)
+        NotificationCenter.default.post(name: Notification.Name("CheckTextFieldsValue"), object: nil)
+        if profileHeaderView.nameTextField.hasText && tagsList.count != 0 || profileHeaderView.cameraButtonHasChangedImage == true && tagsList.count != 0 {
+            saveParametersAndBack()
         }
-        else {
-            profileBackgroundImage.image = UIImage(named: profileViewModel.supergirlBackgroundImageName)
-        }
-        profileBackgroundImage.addBlackGradientLayerInForeground(
-            frame: profileBackgroundImage.bounds,
-            colors: [.black.withAlphaComponent(1), .black.withAlphaComponent(0.83), .black.withAlphaComponent(0.0)],
-            startPoint: .init(x: 0.5, y: 1.0),
-            endPoint: .init(x: 0.5, y: 0.0)
-        )
-        profileBackgroundImage.contentMode = .scaleAspectFill
-        profileImageOpacity.backgroundColor = .black.withAlphaComponent(0.6)
     }
     
     func configureTableView() {
@@ -72,7 +48,7 @@ class ProfileViewController: UIViewController, Storyboarded {
     
     func configureButton() {
         addOptionsButton.setTitle(profileViewModel.addParametersButtonText, for: .normal)
-        addOptionsButton.titleLabel?.font = UIFont(name: UIFont.sairaRegular, size: 16)
+        addOptionsButton.titleLabel?.font = .font(name: .SairaRegular, size: 16)
         
         addButtonView.addBlackGradientLayerInBackground(
             frame: addButtonView.bounds,
@@ -82,9 +58,16 @@ class ProfileViewController: UIViewController, Storyboarded {
         )
     }
     
-    
     @IBAction func addOptionsButtonPressed(_ sender: UIButton) {
         coordinator?.showParametersViewController(viewModel: profileViewModel, viewController: self)
+    }
+    
+    func saveParametersAndBack() {
+        profileViewModel.profile?.name = profileHeaderView.nameTextField.text
+        profileViewModel.saveParameters()
+        presentAlert(title: profileViewModel.alertTitle, image: profileViewModel.alertImage, numberOfLines: profileViewModel.alertTitleNumberOfLines, timeInterval: profileViewModel.alertTimeInterval, completion: {
+            self.coordinator?.back()
+        })
     }
 }
 
@@ -134,7 +117,43 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension ProfileViewController: BodyParameterViewControllerDelegate, ProfileHeaderViewDelegate, ProfileTableCellDelegate {
+extension ProfileViewController: ProfileTableCellDelegate {
+    
+    func checkTextFieldsValue(textField: UITextField, textFieldUnderLine: UIView, index: Int, bodyParameterViewModel: BodyParameterViewModel) {
+        
+        tagsList.append(index)
+        
+        if textField.text == "0" {
+            textFieldUnderLine.backgroundColor = .red
+            tagsList.removeAll()
+        } else if tagsList.count == profileViewModel.selectedParameterViewModel.count || profileViewModel.selectedParameterViewModel.count == 0 {
+            saveParametersAndBack()
+        }
+    }
+     
+    func textFieldShouldReturn(textField: UITextField) {
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        if textField.text == "" {
+            textField.text = "0"
+        } else if textField.hasText {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+    }
+    
+    func shouldChangeCharactersIn() {
+        navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+    
+    func switchToggle(parameterSwitch: UISwitch, textFieldUnderLineView: UIView, bodyParameterViewModel: BodyParameterViewModel) {
+        bodyParameterViewModel.isOn = parameterSwitch.isOn
+        navigationItem.rightBarButtonItem?.isEnabled = true
+        if !parameterSwitch.isOn {
+            textFieldUnderLineView.backgroundColor = .customGray
+        } else {
+            textFieldUnderLineView.backgroundColor = .customYellow
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+    }
     
     func keyboardWillShow(sender: NSNotification) {
         guard let userInfo = sender.userInfo,
@@ -151,37 +170,13 @@ extension ProfileViewController: BodyParameterViewControllerDelegate, ProfileHea
             profileTable.frame.origin.y = newFrameY
         }
     }
+    
     func keyboardWillHide(sender: NSNotification) {
         profileTable.frame.origin.y = 0
     }
-    
-    func didFinishPickingMediaWithInfo(cameraButton: UIButton, profileImage: UIImage) {
-        cameraButton.setImage(profileImage, for: .normal)
-        ProfileManager.sharedInstance.userProfile?.image = profileImage.pngData()
-        cameraButton.layer.borderWidth = 1
-        cameraButton.layer.borderColor = UIColor.customYellow.cgColor
-        cameraButton.clipsToBounds = true
-        navigationItem.rightBarButtonItem?.isEnabled = true
-    }
-    
-    
-    func textFieldShouldReturn(textField: UITextField, bodyParameterViewModel: BodyParameterViewModel) {
-        bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
-        navigationItem.rightBarButtonItem?.isEnabled = false
-        
-        if textField.text == "" {
-            textField.text = "0"
-        } else if textField.text == "0"  {
-            navigationItem.rightBarButtonItem?.isEnabled = false
-        } else if textField.hasText {
-            navigationItem.rightBarButtonItem?.isEnabled = true
-        }
-        
-    }
-    
-    func shouldChangeCharactersIn() {
-        navigationItem.rightBarButtonItem?.isEnabled = true
-    }
+}
+
+extension ProfileViewController: ProfileHeaderViewDelegate {
     
     func handleTextFieldDidChange(nameTextField: UITextField, textFieldUnderline: UIView) {
         nameTextField.text?.capitalizeFirstLetter()
@@ -196,12 +191,42 @@ extension ProfileViewController: BodyParameterViewControllerDelegate, ProfileHea
     }
     
     func didTapOnCameraButton(view: UIView, button: UIButton) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = view as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        vc.allowsEditing = true
-        present(vc, animated: true, completion: nil)
+        let alert = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Add Avatar", style: .default, handler: { _ in
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = view as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Remove Avatar", style: .destructive, handler: { _ in
+            ProfileManager.sharedInstance.userProfile?.image?.removeAll()
+            button.setImage(UIImage(named: "Camera"), for: .normal)
+            self.profileHeaderView.cameraButtonHasChangedImage = true
+            button.layer.borderWidth = 0
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
     }
+    
+    func didFinishPickingMediaWithInfo(cameraButton: UIButton, profileImage: UIImage) {
+        cameraButton.setImage(profileImage, for: .normal)
+        profileHeaderView.cameraButtonHasChangedImage = true
+        ProfileManager.sharedInstance.userProfile?.image = profileImage.pngData()
+        cameraButton.layer.borderWidth = 1
+        cameraButton.layer.borderColor = UIColor.customYellow.cgColor
+        cameraButton.clipsToBounds = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+}
+
+extension ProfileViewController: BodyParameterViewControllerDelegate {
     
     func didTapOnCancelButton() {
         coordinator?.dismiss(animated: true)

@@ -9,20 +9,30 @@ import Foundation
 import UIKit
 
 class ProfileViewModel {
-    
-    let supermanBackgroundImageName = "SupermanProfileImage"
-    let supergirlBackgroundImageName = "SupergirlProfileImage"
+
     let rightBarButtonItemTitle = "Save"
-    let headerNameTitleText = "Name"
+
     let addParametersButtonText = "Add options"
     
-    let profile = ProfileManager.sharedInstance.userProfile!
-    var profileName: String?
+    let defaultCameraImage = "Camera"
+    let headerNameTitle = "Name"
+    let headerNameTitleText = "Name"
+    let headerNamePlaceholder = "Enter Your Name"
+    
+    let footerSelectLabel = "Select an option to display on the main screen."
+    
+    let alertTitle = "Profile has been saved!"
+    let alertImage = "CheckmarkAccessory"
+    let alertTitleNumberOfLines: Int = 1
+    let opacity: UIColor = .black.withAlphaComponent(0.65)
+    let alertTimeInterval: Double = 2
+    
+    let profile = ProfileManager.sharedInstance.userProfile
     
     var bodyParametersStorage = BodyParametersStorage()
     
     var bodyParameteresViewModel = [BodyParameterViewModel]()
-    private var parameterList: [BodyParameter] = []
+    var parameterList: [BodyParameter] = []
     
     var selectedParameterViewModel = [BodyParameterViewModel]()
     
@@ -32,15 +42,14 @@ class ProfileViewModel {
     }
     
     func fetchParameters() {
-        profileName = profile.name
         bodyParameteresViewModel = bodyParametersStorage.fetchProfileParametersViewModel()
-        parameterList = Array(_immutableCocoaArray: profile.parameters!)
+        guard let parameters = profile?.parameters else { return }
+        parameterList = Array(_immutableCocoaArray: parameters)
         
-        if !parameterList.isEmpty {
-            selectedParameterViewModel = parameterList.map({ parameters in
-                createViewModel(with: parameters)
-            })
+        guard !parameterList.isEmpty else {
+            return
         }
+        selectedParameterViewModel = parameterList.map({ createViewModel(with: $0) })
     }
     
     func createViewModel(with bodyParameter: BodyParameter) -> BodyParameterViewModel {
@@ -53,27 +62,24 @@ class ProfileViewModel {
         
         if selectedElement.isSelected == false {
             selectedParameterViewModel.append(selectedElement)
-            selectedElement.isSelected.toggle()
-            
-        } else if selectedElement.isSelected == true {
+        } else {
             if let deselect = selectedParameterViewModel.firstIndex(where: { $0.bodyPart == selectedElement.bodyPart }) {
                 selectedParameterViewModel.remove(at: deselect)
-                selectedElement.isSelected.toggle()
             }
         }
+        selectedElement.isSelected.toggle()
     }
     
     func remove(at index: Int) {
         selectedParameterViewModel.remove(at: index)
+        bodyParameteresViewModel[index].isSelected.toggle()
     }
     
     func check() {
-      
         for viewModel in selectedParameterViewModel {
-            if let model = bodyParametersStorage.parametersList.first(where: { $0.bodyPart == viewModel.bodyPart }) {
-                model.isSelected = false
+            if let model = bodyParameteresViewModel.first(where: { $0.bodyPart == viewModel.bodyPart }) {
+                model.isSelected = true
             }
-        
         }
     }
     
@@ -84,12 +90,15 @@ class ProfileViewModel {
             if let model = bodyParametersStorage.parametersList.first(where: { $0.bodyPart == viewModel.bodyPart }) {
                 model.bodyPart = viewModel.bodyPart
                 model.isSelected = viewModel.isSelected
-                model.value = viewModel.value
+                model.changeValue = viewModel.changeValue
+                model.isOn = viewModel.isOn
+                model.dateArray = viewModel.dateArray
+                model.valueArray = viewModel.valueArray
                 
                 params.append(model)
             }
         }
-        profile.parameters = NSOrderedSet(array: params)
+        profile?.parameters = NSOrderedSet(array: params)
         ProfileManager.sharedInstance.saveProfile()
     }
 }
