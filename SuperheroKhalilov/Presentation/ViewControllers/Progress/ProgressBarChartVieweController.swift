@@ -16,13 +16,10 @@ class ProgressBarChartViewController: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
     var progressViewModel = ProgressViewModel()
-    
-    var bodyNameLabelText = ""
-    var date = Date()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = progressViewModel.configureTitle()
         view.backgroundColor = .black
         configureUI()
     }
@@ -43,21 +40,10 @@ class ProgressBarChartViewController: UIViewController, Storyboarded {
     private func configureUI() {
         barChartView.backgroundColor = .clear
         
-        bodyNameLabel.text = bodyNameLabelText
+        bodyNameLabel.text = progressViewModel.configureBodyNameLabel()
         bodyNameLabel.font = .font(name: .SairaRegular, size: 24)
         
-        if bodyNameLabelText == "Weight" {
-            measurementLabel.text = "kg"
-        }
-        
-        measurementLabel.font = .font(name: .SairaRegular, size: 24)
-        measurementLabel.text = progressViewModel.measurementLabelText
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.YYYY"
-        let startDate = formatter.string(from: date)
-      
-        descriptionLabel .text = "\(progressViewModel.textLabelText)" + " " + "\(startDate)"
+        descriptionLabel .text = progressViewModel.configureDescriptionLabel()
         descriptionLabel .textColor = .customGray
         descriptionLabel .numberOfLines = 2
         descriptionLabel .font = .font(name: .SairaMedium, size: 18)

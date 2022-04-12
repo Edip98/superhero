@@ -16,13 +16,10 @@ extension MainCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func presentProgressChartVC(title: String, bodyName: String, date: Date, viewModel: [BodyParameterViewModel]) {
+    func presentProgressChartVC(paraemters: BodyParameterViewModel) {
         let vc = ProgressBarChartViewController.instantiate()
         vc.coordinator = self
-        vc.title = title
-        vc.date = date
-        vc.bodyNameLabelText = bodyName
-        vc.progressViewModel.bodyParameterViewModel = viewModel
+        vc.progressViewModel.diagramData = paraemters
         navigationController.pushViewController(vc, animated: true)
     }
 }

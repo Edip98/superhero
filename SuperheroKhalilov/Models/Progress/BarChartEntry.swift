@@ -14,5 +14,5 @@ struct BarChartEntry {
     let value: String
     var height: Float
     let color: UIColor
-    let date: String
+    let date: Date
 }

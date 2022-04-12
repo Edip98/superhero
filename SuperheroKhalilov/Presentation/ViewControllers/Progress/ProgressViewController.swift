@@ -48,10 +48,8 @@ extension ProgressViewController: UITableViewDataSource {
 extension ProgressViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let title = progressViewModel.bodyParameterViewModel[indexPath.row].bodyPart else { return }
-        guard let date = progressViewModel.bodyParameterViewModel[indexPath.row].dateArray.first else { return }
-        let array = [progressViewModel.bodyParameterViewModel[indexPath.row]]
-        coordinator?.presentProgressChartVC(title: title + " " + progressViewModel.chart, bodyName: title + ",", date: date, viewModel: array)
+        let array = progressViewModel.bodyParameterViewModel[indexPath.row]
+        coordinator?.presentProgressChartVC(paraemters: array)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -36,7 +36,6 @@ class BodyParametersStorage {
             let param = BodyParameter(entity: entity!, insertInto: context)
             param.bodyPart = bodyPartsName
             param.isSelected = false
-            param.value = 0
             param.changeValue = 0
             param.isOn = false
             param.dateArray = []

@@ -46,11 +46,10 @@ class ProfileViewModel {
         guard let parameters = profile?.parameters else { return }
         parameterList = Array(_immutableCocoaArray: parameters)
         
-        if !parameterList.isEmpty {
-            selectedParameterViewModel = parameterList.map({ parameters in
-                createViewModel(with: parameters)
-            })
+        guard !parameterList.isEmpty else {
+            return
         }
+        selectedParameterViewModel = parameterList.map({ createViewModel(with: $0) })
     }
     
     func createViewModel(with bodyParameter: BodyParameter) -> BodyParameterViewModel {
@@ -63,20 +62,17 @@ class ProfileViewModel {
         
         if selectedElement.isSelected == false {
             selectedParameterViewModel.append(selectedElement)
-            selectedElement.isSelected.toggle()
-            
-        } else if selectedElement.isSelected == true {
+        } else {
             if let deselect = selectedParameterViewModel.firstIndex(where: { $0.bodyPart == selectedElement.bodyPart }) {
                 selectedParameterViewModel.remove(at: deselect)
-                selectedElement.isSelected.toggle()
             }
         }
+        selectedElement.isSelected.toggle()
     }
     
     func remove(at index: Int) {
         selectedParameterViewModel.remove(at: index)
-        let removedElement = bodyParameteresViewModel[index]
-        removedElement.isSelected.toggle()
+        bodyParameteresViewModel[index].isSelected.toggle()
     }
     
     func check() {
@@ -94,7 +90,6 @@ class ProfileViewModel {
             if let model = bodyParametersStorage.parametersList.first(where: { $0.bodyPart == viewModel.bodyPart }) {
                 model.bodyPart = viewModel.bodyPart
                 model.isSelected = viewModel.isSelected
-                model.value = viewModel.value
                 model.changeValue = viewModel.changeValue
                 model.isOn = viewModel.isOn
                 model.dateArray = viewModel.dateArray

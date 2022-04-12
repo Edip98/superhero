@@ -127,11 +127,10 @@ extension ProfileViewController: ProfileTableCellDelegate {
             textFieldUnderLine.backgroundColor = .red
             tagsList.removeAll()
         } else if tagsList.count == profileViewModel.selectedParameterViewModel.count || profileViewModel.selectedParameterViewModel.count == 0 {
-            bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
             saveParametersAndBack()
         }
     }
-    
+     
     func textFieldShouldReturn(textField: UITextField) {
         navigationItem.rightBarButtonItem?.isEnabled = false
         if textField.text == "" {

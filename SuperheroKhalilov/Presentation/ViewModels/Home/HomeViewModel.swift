@@ -44,7 +44,6 @@ class HomeViewModel {
     func updateViewModel() {
         guard let parameters = profile?.parameters else { return }
         bodyParameterEntity = Array(_immutableCocoaArray: parameters)
-        bodyParameterViewModel = bodyParameterEntity.filter { $0.isOn }
-        .map { BodyParameterViewModel(model: $0) }
+        bodyParameterViewModel = bodyParameterEntity.filter { $0.isOn }.map { BodyParameterViewModel(model: $0) }
     }
 }

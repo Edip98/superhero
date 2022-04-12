@@ -56,7 +56,7 @@ class ProfileTableCell: UITableViewCell {
     func configure(with viewModel: BodyParameterViewModel) {
         bodyParameterViewModel = viewModel
         parameterLabel.text = viewModel.bodyPart
-        valueTextField.text = String(viewModel.value)
+        valueTextField.text = String(viewModel.valueArray.last ?? 0)
         parameterSwitch.isOn = viewModel.isOn
         
         if parameterLabel.text == "Weight" {
@@ -135,8 +135,8 @@ extension ProfileTableCell: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        bodyParameterViewModel.addValue(Int(textField.text ?? "") ?? 0)
-        bodyParameterViewModel.value = Int16(textField.text ?? "") ?? 0
+        guard let value = textField.text else { return }
+        bodyParameterViewModel.addValue(Int(value) ?? 0)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -36,8 +36,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func configure(with viewModel: BodyParameterViewModel) {
         parameterLabel.text = viewModel.bodyPart
-        valueLabel.text = String(viewModel.value)
-        changeValueLabel.text = viewModel.changeValueText
+        valueLabel.text = String(viewModel.valueArray.last ?? 0)
+        changeValueLabel.text = "\(viewModel.changeValueText)"
         circleView.backgroundColor = viewModel.color
         
         if parameterLabel.text == "Weight" {

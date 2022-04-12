@@ -14,10 +14,6 @@
 		C349D47527FD749000965599 /* ProgressBarChartVieweController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D47427FD749000965599 /* ProgressBarChartVieweController.swift */; };
 		C349D47827FD74E500965599 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D47727FD74E500965599 /* BarChartView.swift */; };
 		C349D47A27FD757100965599 /* BarChartEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D47927FD757100965599 /* BarChartEntry.swift */; };
-		C349D48F27FD931700965599 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D48B27FD931700965599 /* Profile+CoreDataClass.swift */; };
-		C349D49027FD931700965599 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D48C27FD931700965599 /* Profile+CoreDataProperties.swift */; };
-		C349D49127FD931700965599 /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D48D27FD931700965599 /* BodyParameter+CoreDataClass.swift */; };
-		C349D49227FD931700965599 /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D48E27FD931700965599 /* BodyParameter+CoreDataProperties.swift */; };
 		C350863B27DA201A002C8EFB /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863A27DA201A002C8EFB /* Coordinator+Profile.swift */; };
 		C350863D27DA206D002C8EFB /* Coordinatr+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863C27DA206D002C8EFB /* Coordinatr+Progress.swift */; };
 		C350863F27DA207B002C8EFB /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350863E27DA207B002C8EFB /* Coordinator+Programs.swift */; };
@@ -83,6 +79,11 @@
 		C37A8F0927E2212500311BC7 /* BodyParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37A8F0727E2212500311BC7 /* BodyParameterCell.xib */; };
 		C37DB1D827F5AC36008A4ED4 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DB1D727F5AC36008A4ED4 /* UIView+RoundCorners.swift */; };
 		C37DB1DA27F5B059008A4ED4 /* UIViewController+DashedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DB1D927F5B059008A4ED4 /* UIViewController+DashedLine.swift */; };
+		C38834BF2805D6E700E3B4DB /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C38834BD2805D6E700E3B4DB /* Profile.xcdatamodeld */; };
+		C38834CC2805D96C00E3B4DB /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834C82805D96C00E3B4DB /* Profile+CoreDataClass.swift */; };
+		C38834CD2805D96C00E3B4DB /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */; };
+		C38834CE2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */; };
+		C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */; };
 		C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */; };
 		C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50C927C185FB00488B77 /* AppDelegate.swift */; };
 		C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */; };
@@ -98,7 +99,6 @@
 		C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F727C18B8F00488B77 /* StartViewModel.swift */; };
 		C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */; };
 		C3CD50FC27C18BC100488B77 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50FB27C18BC100488B77 /* ProfileManager.swift */; };
-		C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */; };
 		C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */; };
 		C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */; };
 		C3CD510927C18C4400488B77 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD510827C18C4400488B77 /* UIView+Gradient.swift */; };
@@ -127,10 +127,6 @@
 		C349D47427FD749000965599 /* ProgressBarChartVieweController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarChartVieweController.swift; sourceTree = "<group>"; };
 		C349D47727FD74E500965599 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		C349D47927FD757100965599 /* BarChartEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartEntry.swift; sourceTree = "<group>"; };
-		C349D48B27FD931700965599 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C349D48C27FD931700965599 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C349D48D27FD931700965599 /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C349D48E27FD931700965599 /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C350863A27DA201A002C8EFB /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
 		C350863C27DA206D002C8EFB /* Coordinatr+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinatr+Progress.swift"; sourceTree = "<group>"; };
 		C350863E27DA207B002C8EFB /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
@@ -196,6 +192,11 @@
 		C37A8F0727E2212500311BC7 /* BodyParameterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyParameterCell.xib; sourceTree = "<group>"; };
 		C37DB1D727F5AC36008A4ED4 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
 		C37DB1D927F5B059008A4ED4 /* UIViewController+DashedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DashedLine.swift"; sourceTree = "<group>"; };
+		C38834BE2805D6E700E3B4DB /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
+		C38834C82805D96C00E3B4DB /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		C3CD50C627C185FB00488B77 /* SuperheroKhalilov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroKhalilov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD50C927C185FB00488B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,7 +214,6 @@
 		C3CD50F727C18B8F00488B77 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		C3CD50F927C18BAD00488B77 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C3CD50FB27C18BC100488B77 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
-		C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
 		C3CD510427C18C1900488B77 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		C3CD510627C18C3800488B77 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
 		C3CD510827C18C4400488B77 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
@@ -716,11 +716,11 @@
 		C3CD50ED27C1872000488B77 /* ProfileCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				C349D48B27FD931700965599 /* Profile+CoreDataClass.swift */,
-				C349D48C27FD931700965599 /* Profile+CoreDataProperties.swift */,
-				C349D48D27FD931700965599 /* BodyParameter+CoreDataClass.swift */,
-				C349D48E27FD931700965599 /* BodyParameter+CoreDataProperties.swift */,
-				C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */,
+				C38834C82805D96C00E3B4DB /* Profile+CoreDataClass.swift */,
+				C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */,
+				C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */,
+				C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */,
+				C38834BD2805D6E700E3B4DB /* Profile.xcdatamodeld */,
 			);
 			path = ProfileCoreData;
 			sourceTree = "<group>";
@@ -937,7 +937,7 @@
 				C359A3B027E356FF005B482A /* BodyParametersStorage.swift in Sources */,
 				C3794DBC27FAF46000777424 /* ProgressAlertView.swift in Sources */,
 				C33BDB8F27DA88060060A2A4 /* ProfileTableCell.swift in Sources */,
-				C349D49127FD931700965599 /* BodyParameter+CoreDataClass.swift in Sources */,
+				C38834CE2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift in Sources */,
 				C350864727DA42C5002C8EFB /* ProfileViewController.swift in Sources */,
 				C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */,
 				C37A8EFD27E218F000311BC7 /* BodyParameterViewModel.swift in Sources */,
@@ -947,7 +947,7 @@
 				C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */,
 				C3F4EEF527F04F3D0090CEC9 /* CustomButton.swift in Sources */,
 				C349D47527FD749000965599 /* ProgressBarChartVieweController.swift in Sources */,
-				C349D48F27FD931700965599 /* Profile+CoreDataClass.swift in Sources */,
+				C38834CC2805D96C00E3B4DB /* Profile+CoreDataClass.swift in Sources */,
 				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
 				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
 				C349D47827FD74E500965599 /* BarChartView.swift in Sources */,
@@ -960,10 +960,10 @@
 				C350864327DA20B9002C8EFB /* Coordinator+Muscles.swift in Sources */,
 				C349D47A27FD757100965599 /* BarChartEntry.swift in Sources */,
 				C3797A1027F4AD58003F6320 /* CustomAlertViewController.swift in Sources */,
-				C349D49227FD931700965599 /* BodyParameter+CoreDataProperties.swift in Sources */,
+				C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */,
 				C3F96E6127EA1CE600BAC0F2 /* PresentationController.swift in Sources */,
 				C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */,
-				C349D49027FD931700965599 /* Profile+CoreDataProperties.swift in Sources */,
+				C38834CD2805D96C00E3B4DB /* Profile+CoreDataProperties.swift in Sources */,
 				C3CD50E927C186FC00488B77 /* Coordinator.swift in Sources */,
 				C350863B27DA201A002C8EFB /* Coordinator+Profile.swift in Sources */,
 				C3F96E6527EA1CFC00BAC0F2 /* DismissAnimation.swift in Sources */,
@@ -978,8 +978,8 @@
 				C3794DC127FC40FF00777424 /* UIResponder+Ext.swift in Sources */,
 				C3CD50EB27C1870D00488B77 /* Storyboarded.swift in Sources */,
 				C321A7BD27E8903F0019B98A /* String+Capitalize.swift in Sources */,
+				C38834BF2805D6E700E3B4DB /* Profile.xcdatamodeld in Sources */,
 				C3CD50F127C1874200488B77 /* BaseViewController.swift in Sources */,
-				C3CD50FF27C18BD800488B77 /* Profile.xcdatamodeld in Sources */,
 				C37DB1D827F5AC36008A4ED4 /* UIView+RoundCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1210,12 +1210,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C3CD50FD27C18BD800488B77 /* Profile.xcdatamodeld */ = {
+		C38834BD2805D6E700E3B4DB /* Profile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */,
+				C38834BE2805D6E700E3B4DB /* Profile.xcdatamodel */,
 			);
-			currentVersion = C3CD50FE27C18BD800488B77 /* Profile.xcdatamodel */;
+			currentVersion = C38834BE2805D6E700E3B4DB /* Profile.xcdatamodel */;
 			path = Profile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
