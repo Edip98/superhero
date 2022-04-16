@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Exercise View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ExerciseViewController" id="Y6W-OH-hqX" customClass="ExerciseViewController" customModule="SuperheroKhalilov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="dHp-cQ-lJC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUc-qz-p3O">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="865"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.2" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-qx-g0x">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="277"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="277" id="ibL-iO-RXO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barbell" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-h6-as2">
+                                                <rect key="frame" x="37" y="401" width="48" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Kgt-zg-R38"/>
+                                                    <constraint firstAttribute="width" constant="48" id="tv9-hb-fVt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-Bx-EuH">
+                                                <rect key="frame" x="109" y="401" width="226" height="84"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aut-fl-FfY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="226" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="54" id="cb2-0B-OUi"/>
+                                                        </constraints>
+                                                        <string key="text">Bench press from 
+the chest lying</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barbell, Normal, Bodybuilder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3T-E1-Un7">
+                                                        <rect key="frame" x="0.0" y="57" width="226" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="O91-Re-WpB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.97647058959999999" green="0.86274516580000005" blue="0.46666663889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJW-2K-kec">
+                                                <rect key="frame" x="37" y="501" width="343" height="353"/>
+                                                <string key="text">Starting position: Lying on a bench. Grasp the barbell with a wide grip from above (palms away from you), the distance between the hands is wider than 
+the shoulders.
+Remove the bar from the racks.
+Taking a deep breath, lower the barbell 
+to the middle of your chest. Hold your breath and press the barbell hard up into fully extended arms while exhaling powerfully.
+Try to lower the weight smoothly, and hold your breath and press the barbell hard up into fully extended arms while exhaling powerfully.</string>
+                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="gHa-qx-g0x" firstAttribute="leading" secondItem="qUc-qz-p3O" secondAttribute="leading" id="07v-EG-iAA"/>
+                                            <constraint firstAttribute="trailing" secondItem="wJY-Bx-EuH" secondAttribute="trailing" constant="79" id="2ru-Tw-PYE"/>
+                                            <constraint firstItem="fEU-h6-as2" firstAttribute="leading" secondItem="qUc-qz-p3O" secondAttribute="leading" constant="37" id="3Ji-HY-Hci"/>
+                                            <constraint firstAttribute="trailing" secondItem="EJW-2K-kec" secondAttribute="trailing" constant="34" id="4dJ-1F-w4N"/>
+                                            <constraint firstAttribute="trailing" secondItem="gHa-qx-g0x" secondAttribute="trailing" id="FKe-Rz-dRf"/>
+                                            <constraint firstItem="EJW-2K-kec" firstAttribute="leading" secondItem="qUc-qz-p3O" secondAttribute="leading" constant="37" id="Hta-tm-nIG"/>
+                                            <constraint firstItem="wJY-Bx-EuH" firstAttribute="top" secondItem="gHa-qx-g0x" secondAttribute="bottom" constant="24" id="dcx-Zx-aSs"/>
+                                            <constraint firstItem="gHa-qx-g0x" firstAttribute="top" secondItem="qUc-qz-p3O" secondAttribute="top" constant="100" id="f3x-Mu-2YM"/>
+                                            <constraint firstItem="wJY-Bx-EuH" firstAttribute="leading" secondItem="fEU-h6-as2" secondAttribute="trailing" constant="24" id="mOd-1g-NHL"/>
+                                            <constraint firstItem="EJW-2K-kec" firstAttribute="top" secondItem="wJY-Bx-EuH" secondAttribute="bottom" constant="16" id="mYW-tH-ZMb"/>
+                                            <constraint firstItem="fEU-h6-as2" firstAttribute="top" secondItem="gHa-qx-g0x" secondAttribute="bottom" constant="24" id="mtN-ch-Qrn"/>
+                                            <constraint firstAttribute="bottom" secondItem="EJW-2K-kec" secondAttribute="bottom" constant="11" id="pbq-cO-VDW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qUc-qz-p3O" firstAttribute="leading" secondItem="dHp-cQ-lJC" secondAttribute="leading" id="DGc-xB-GKe"/>
+                                    <constraint firstItem="qUc-qz-p3O" firstAttribute="top" secondItem="dHp-cQ-lJC" secondAttribute="top" id="fO9-OJ-7cj"/>
+                                    <constraint firstAttribute="trailing" secondItem="qUc-qz-p3O" secondAttribute="trailing" id="kCa-0t-MDQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="qUc-qz-p3O" secondAttribute="bottom" id="o3l-PR-Oap"/>
+                                    <constraint firstItem="qUc-qz-p3O" firstAttribute="width" secondItem="dHp-cQ-lJC" secondAttribute="width" id="ow8-9Z-lHT"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3x-1W-cZw">
+                                <rect key="frame" x="0.0" y="778" width="414" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-pA-yEV" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="21" width="328" height="49"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add to Program">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XK1-eD-92O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="HQe-c6-omp"/>
+                                    <constraint firstAttribute="trailing" secondItem="8fi-pA-yEV" secondAttribute="trailing" constant="43" id="Xmx-aZ-8Wh"/>
+                                    <constraint firstItem="8fi-pA-yEV" firstAttribute="top" secondItem="b3x-1W-cZw" secondAttribute="top" constant="21" id="e6W-Yh-WMJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="8fi-pA-yEV" secondAttribute="bottom" constant="48" id="xDM-2g-ZBh"/>
+                                    <constraint firstItem="8fi-pA-yEV" firstAttribute="leading" secondItem="b3x-1W-cZw" secondAttribute="leading" constant="43" id="zyR-eC-9YC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b3x-1W-cZw" secondAttribute="bottom" id="4UW-LL-BCF"/>
+                            <constraint firstItem="dHp-cQ-lJC" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="K5l-ga-3lr"/>
+                            <constraint firstItem="b3x-1W-cZw" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="KQE-Ov-lSM"/>
+                            <constraint firstAttribute="trailing" secondItem="b3x-1W-cZw" secondAttribute="trailing" id="Uy6-hL-tm3"/>
+                            <constraint firstAttribute="bottom" secondItem="dHp-cQ-lJC" secondAttribute="bottom" id="cmT-xj-n37"/>
+                            <constraint firstItem="dHp-cQ-lJC" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="roc-uB-7ig"/>
+                            <constraint firstAttribute="trailing" secondItem="dHp-cQ-lJC" secondAttribute="trailing" id="yvw-op-txS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="8fi-pA-yEV" id="fyL-gp-ulJ"/>
+                        <outlet property="barbellImageView" destination="fEU-h6-as2" id="JFi-20-N88"/>
+                        <outlet property="buttonContentView" destination="b3x-1W-cZw" id="aBG-H2-caG"/>
+                        <outlet property="contentView" destination="qUc-qz-p3O" id="e0F-YA-Si8"/>
+                        <outlet property="exerciseDescriptionLabel" destination="l3T-E1-Un7" id="D2g-1G-zfc"/>
+                        <outlet property="exerciseExplanationLabel" destination="EJW-2K-kec" id="DbW-O0-AaO"/>
+                        <outlet property="exerciseImageView" destination="gHa-qx-g0x" id="ySb-tk-qtL"/>
+                        <outlet property="exerciseNameLabel" destination="Aut-fl-FfY" id="BcX-VW-Da3"/>
+                        <outlet property="scrollView" destination="dHp-cQ-lJC" id="ENH-cn-iUk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.214953271028037" y="63.498920086393092"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2.2" width="375" height="213"/>
+        <image name="Barbell" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -15,4 +15,11 @@ extension MainCoordinator {
         vc.title = title
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func presentExerciseVC(with viewModel: ExerciseViewModel) {
+        let vc = ExerciseViewController.instantiate()
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

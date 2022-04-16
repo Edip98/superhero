@@ -7,6 +7,9 @@
 		<string>Saira-Regular.ttf</string>
 		<string>Gilroy-Semibold.ttf</string>
 		<string>Saira-Medium.ttf</string>
+		<string>Nunito-Light.ttf</string>
+		<string>Nunito-SemiBold.ttf</string>
+		<string>Saira-Light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -29,6 +32,8 @@
 	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
