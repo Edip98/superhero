@@ -48,7 +48,7 @@
                 <outlet property="bodyPartLabel" destination="PfB-N8-JcN" id="Amh-Kg-dyS"/>
                 <outlet property="underlineView" destination="dIa-Gt-8IK" id="ZH3-Pc-JNt"/>
             </connections>
-            <point key="canvasLocation" x="136.95652173913044" y="76.674107142857139"/>
+            <point key="canvasLocation" x="136.95652173913044" y="76.339285714285708"/>
         </tableViewCell>
     </objects>
     <resources>

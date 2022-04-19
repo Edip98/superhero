@@ -10,7 +10,9 @@ import Foundation
 extension MainCoordinator {
     
     func presentCalculatorVC(title: String) {
-        let vc = CalculatorViewController.instantiate()
+        //let vc = CalculatorViewController.instantiate()
+        let vc = MusclesViewController.instantiate()
+        vc.mode = .edit
         vc.coordinator = self
         vc.title = title
         navigationController.pushViewController(vc, animated: true)

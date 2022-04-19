@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class ProfileViewController: BaseViewController {
     
@@ -21,7 +22,7 @@ class ProfileViewController: BaseViewController {
     let transition = PanelTransition()
     
     var tagsList = [Int]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: profileViewModel.rightBarButtonItemTitle, style: .plain, target: self, action: #selector(saveButtonPressed))
@@ -71,7 +72,6 @@ class ProfileViewController: BaseViewController {
     }
 }
 
-
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,6 +115,21 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             navigationItem.rightBarButtonItem?.isEnabled = true
         }
     }
+    
+    func checkAccessToPhotoLibrary() {
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+        } else {
+            PHPhotoLibrary.requestAuthorization(request)
+        }
+    }
+    
+    func request(status: PHAuthorizationStatus) {
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            print("Successe")
+        } else {
+            print("Failed")
+        }
+    }
 }
 
 extension ProfileViewController: ProfileTableCellDelegate {
@@ -127,10 +142,12 @@ extension ProfileViewController: ProfileTableCellDelegate {
             textFieldUnderLine.backgroundColor = .red
             tagsList.removeAll()
         } else if tagsList.count == profileViewModel.selectedParameterViewModel.count || profileViewModel.selectedParameterViewModel.count == 0 {
+            guard let value = textField.text else { return }
+            bodyParameterViewModel.addValue(Int(value) ?? 0)
             saveParametersAndBack()
         }
     }
-     
+    
     func textFieldShouldReturn(textField: UITextField) {
         navigationItem.rightBarButtonItem?.isEnabled = false
         if textField.text == "" {
@@ -190,32 +207,36 @@ extension ProfileViewController: ProfileHeaderViewDelegate {
         }
     }
     
-    func didTapOnCameraButton(view: UIView, button: UIButton) {
+    func didTapOnCameraButton(view: UIView, button: UIButton, isDeletable: Bool) {
+        
+        checkAccessToPhotoLibrary()
+    
         let alert = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Add Avatar", style: .default, handler: { _ in
-            let vc = UIImagePickerController()
-            vc.sourceType = .photoLibrary
-            vc.delegate = view as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            vc.allowsEditing = true
-            self.present(vc, animated: true, completion: nil)
-            
+            let picker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.allowsEditing = true
+            picker.delegate = view as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            self.present(picker, animated: true, completion: nil)
         }))
         
-        alert.addAction(UIAlertAction(title: "Remove Avatar", style: .destructive, handler: { _ in
-            ProfileManager.sharedInstance.userProfile?.image?.removeAll()
-            button.setImage(UIImage(named: "Camera"), for: .normal)
-            self.profileHeaderView.cameraButtonHasChangedImage = true
-            button.layer.borderWidth = 0
-            self.navigationItem.rightBarButtonItem?.isEnabled = true
-        }))
+        if isDeletable {
+            alert.addAction(UIAlertAction(title: "Remove Avatar", style: .destructive, handler: { _ in
+                ProfileManager.sharedInstance.userProfile?.image?.removeAll()
+                button.setImage(UIImage(named: "Camera"), for: .normal)
+                self.profileHeaderView.cameraButtonHasChangedImage = true
+                button.layer.borderWidth = 0
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+            }))
+        }
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
+   
         present(alert, animated: true)
     }
     
-    func didFinishPickingMediaWithInfo(cameraButton: UIButton, profileImage: UIImage) {
+    func didFinishPickingMediaWithInfo(cameraButton: UIButton, profileImage: UIImage, isDeletable: inout Bool) {
         cameraButton.setImage(profileImage, for: .normal)
         profileHeaderView.cameraButtonHasChangedImage = true
         ProfileManager.sharedInstance.userProfile?.image = profileImage.pngData()
@@ -223,6 +244,7 @@ extension ProfileViewController: ProfileHeaderViewDelegate {
         cameraButton.layer.borderColor = UIColor.customYellow.cgColor
         cameraButton.clipsToBounds = true
         navigationItem.rightBarButtonItem?.isEnabled = true
+        isDeletable = true
     }
 }
 

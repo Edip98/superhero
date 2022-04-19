@@ -71,8 +71,7 @@ class ProfileViewModel {
     }
     
     func remove(at index: Int) {
-        selectedParameterViewModel.remove(at: index)
-        bodyParameteresViewModel[index].isSelected.toggle()
+        selectedParameterViewModel.remove(at: index).isSelected.toggle()
     }
     
     func check() {

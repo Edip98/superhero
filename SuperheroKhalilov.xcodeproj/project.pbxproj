@@ -32,11 +32,18 @@
 		C36ADE3E27C52E8B00C0322C /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */; };
 		C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */; };
 		C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4327C52EB000C0322C /* CalculatorViewModel.swift */; };
-		C36ADE4727C52EBC00C0322C /* MusclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */; };
+		C36ADE4727C52EBC00C0322C /* MuscleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4627C52EBC00C0322C /* MuscleViewModel.swift */; };
 		C36ADE4B27C5300A00C0322C /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4A27C5300A00C0322C /* ProgressViewController.swift */; };
 		C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */; };
 		C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE4E27C5303000C0322C /* CalculatorViewController.swift */; };
 		C36ADE5127C5304400C0322C /* MusclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ADE5027C5304400C0322C /* MusclesViewController.swift */; };
+		C374274428081E7300E56B08 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374274328081E7200E56B08 /* ExerciseViewController.swift */; };
+		C374274628081EA300E56B08 /* ExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C374274528081EA300E56B08 /* ExerciseViewController.storyboard */; };
+		C374274828081FCC00E56B08 /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374274728081FCC00E56B08 /* ExerciseViewModel.swift */; };
+		C374274A2808526A00E56B08 /* ExerciseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37427492808526A00E56B08 /* ExerciseStorage.swift */; };
+		C374274C280857F700E56B08 /* SingleMuscleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374274B280857F700E56B08 /* SingleMuscleViewModel.swift */; };
+		C37427502808645E00E56B08 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374274F2808645E00E56B08 /* ExerciseCell.swift */; };
+		C37427532808692400E56B08 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37427522808692400E56B08 /* Muscle.swift */; };
 		C3794DBC27FAF46000777424 /* ProgressAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3794DBB27FAF46000777424 /* ProgressAlertView.swift */; };
 		C3794DBE27FAF46A00777424 /* ProgressAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3794DBD27FAF46A00777424 /* ProgressAlertView.xib */; };
 		C3794DC127FC40FF00777424 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3794DC027FC40FE00777424 /* UIResponder+Ext.swift */; };
@@ -84,6 +91,24 @@
 		C38834CD2805D96C00E3B4DB /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */; };
 		C38834CE2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */; };
 		C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */; };
+		C3A6D8E62806B75E0010562C /* Exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8E52806B75E0010562C /* Exercises.json */; };
+		C3A6D8EF2806C3A90010562C /* MusclesSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8EE2806C3A90010562C /* MusclesSectionHeader.xib */; };
+		C3A6D8F72806CD480010562C /* ExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8F52806CD480010562C /* ExerciseCell.xib */; };
+		C3A6D9072806DB060010562C /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8F92806DB060010562C /* Nunito-Bold.ttf */; };
+		C3A6D9082806DB060010562C /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FA2806DB060010562C /* Nunito-Italic.ttf */; };
+		C3A6D9092806DB060010562C /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FB2806DB060010562C /* Nunito-Black.ttf */; };
+		C3A6D90A2806DB060010562C /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FC2806DB060010562C /* Nunito-SemiBold.ttf */; };
+		C3A6D90B2806DB060010562C /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FD2806DB060010562C /* Nunito-ExtraBold.ttf */; };
+		C3A6D90C2806DB060010562C /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FE2806DB060010562C /* Nunito-SemiBoldItalic.ttf */; };
+		C3A6D90D2806DB060010562C /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8FF2806DB060010562C /* Nunito-BoldItalic.ttf */; };
+		C3A6D90E2806DB060010562C /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9002806DB060010562C /* Nunito-Light.ttf */; };
+		C3A6D90F2806DB060010562C /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9012806DB060010562C /* Nunito-ExtraBoldItalic.ttf */; };
+		C3A6D9102806DB060010562C /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9022806DB060010562C /* Nunito-BlackItalic.ttf */; };
+		C3A6D9112806DB060010562C /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9032806DB060010562C /* Nunito-ExtraLight.ttf */; };
+		C3A6D9122806DB060010562C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9042806DB060010562C /* Nunito-Regular.ttf */; };
+		C3A6D9132806DB060010562C /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9052806DB060010562C /* Nunito-ExtraLightItalic.ttf */; };
+		C3A6D9142806DB060010562C /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9062806DB060010562C /* Nunito-LightItalic.ttf */; };
+		C3A6D916280767D30010562C /* MusclesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6D915280767D30010562C /* MusclesSectionHeader.swift */; };
 		C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */; };
 		C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50C927C185FB00488B77 /* AppDelegate.swift */; };
 		C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */; };
@@ -145,11 +170,18 @@
 		C36ADE3D27C52E8B00C0322C /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewModel.swift; sourceTree = "<group>"; };
 		C36ADE4327C52EB000C0322C /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
-		C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewModel.swift; sourceTree = "<group>"; };
+		C36ADE4627C52EBC00C0322C /* MuscleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleViewModel.swift; sourceTree = "<group>"; };
 		C36ADE4A27C5300A00C0322C /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
 		C36ADE4E27C5303000C0322C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		C36ADE5027C5304400C0322C /* MusclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewController.swift; sourceTree = "<group>"; };
+		C374274328081E7200E56B08 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		C374274528081EA300E56B08 /* ExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseViewController.storyboard; sourceTree = "<group>"; };
+		C374274728081FCC00E56B08 /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
+		C37427492808526A00E56B08 /* ExerciseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStorage.swift; sourceTree = "<group>"; };
+		C374274B280857F700E56B08 /* SingleMuscleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMuscleViewModel.swift; sourceTree = "<group>"; };
+		C374274F2808645E00E56B08 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		C37427522808692400E56B08 /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 		C3794DBB27FAF46000777424 /* ProgressAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressAlertView.swift; sourceTree = "<group>"; };
 		C3794DBD27FAF46A00777424 /* ProgressAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressAlertView.xib; sourceTree = "<group>"; };
 		C3794DC027FC40FE00777424 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
@@ -197,6 +229,24 @@
 		C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3A6D8E52806B75E0010562C /* Exercises.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exercises.json; sourceTree = "<group>"; };
+		C3A6D8EE2806C3A90010562C /* MusclesSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusclesSectionHeader.xib; sourceTree = "<group>"; };
+		C3A6D8F52806CD480010562C /* ExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseCell.xib; sourceTree = "<group>"; };
+		C3A6D8F92806DB060010562C /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		C3A6D8FA2806DB060010562C /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		C3A6D8FB2806DB060010562C /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		C3A6D8FC2806DB060010562C /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		C3A6D8FD2806DB060010562C /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C3A6D8FE2806DB060010562C /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D8FF2806DB060010562C /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D9002806DB060010562C /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		C3A6D9012806DB060010562C /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D9022806DB060010562C /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D9032806DB060010562C /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C3A6D9042806DB060010562C /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		C3A6D9052806DB060010562C /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D9062806DB060010562C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		C3A6D915280767D30010562C /* MusclesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesSectionHeader.swift; sourceTree = "<group>"; };
 		C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		C3CD50C627C185FB00488B77 /* SuperheroKhalilov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroKhalilov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD50C927C185FB00488B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				C350865427DA4B8C002C8EFB /* MusclesViewController.storyboard */,
+				C374274528081EA300E56B08 /* ExerciseViewController.storyboard */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -317,6 +368,7 @@
 		C36ADE1927C4EFD600C0322C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6D8DE2806ACF10010562C /* Muscles */,
 				C37979F827F486E8003F6320 /* Progress */,
 				C33BDB8C27DA87B20060A2A4 /* Profile */,
 				C36ADE1C27C4F03C00C0322C /* Menu */,
@@ -388,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				C36ADE5027C5304400C0322C /* MusclesViewController.swift */,
+				C374274328081E7200E56B08 /* ExerciseViewController.swift */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -444,7 +497,9 @@
 		C36ADE4527C52EB100C0322C /* Muscles */ = {
 			isa = PBXGroup;
 			children = (
-				C36ADE4627C52EBC00C0322C /* MusclesViewModel.swift */,
+				C36ADE4627C52EBC00C0322C /* MuscleViewModel.swift */,
+				C374274728081FCC00E56B08 /* ExerciseViewModel.swift */,
+				C374274B280857F700E56B08 /* SingleMuscleViewModel.swift */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -456,6 +511,15 @@
 				C350864827DA42DF002C8EFB /* ProfileViewController.storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		C3742751280865CB00E56B08 /* ExerciseCell */ = {
+			isa = PBXGroup;
+			children = (
+				C374274F2808645E00E56B08 /* ExerciseCell.swift */,
+				C3A6D8F52806CD480010562C /* ExerciseCell.xib */,
+			);
+			path = ExerciseCell;
 			sourceTree = "<group>";
 		};
 		C37979BC27F4525F003F6320 /* Saira */ = {
@@ -528,6 +592,71 @@
 			path = BodyParameterCell;
 			sourceTree = "<group>";
 		};
+		C3A6D8DE2806ACF10010562C /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				C3742751280865CB00E56B08 /* ExerciseCell */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		C3A6D8DF2806B2CC0010562C /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				C37427492808526A00E56B08 /* ExerciseStorage.swift */,
+				C37427522808692400E56B08 /* Muscle.swift */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		C3A6D8E82806C3540010562C /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6D915280767D30010562C /* MusclesSectionHeader.swift */,
+				C3A6D8EE2806C3A90010562C /* MusclesSectionHeader.xib */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		C3A6D8E92806C35D0010562C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C3DE038B27DF69D900CAC875 /* ProfileHeaderView.swift */,
+				C3DE038D27DF6A3B00CAC875 /* ProfileHeaderView.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C3A6D8EA2806C3670010562C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C3DE039127DF786300CAC875 /* ProfileFooterView.swift */,
+				C3DE038F27DF785C00CAC875 /* ProfileFooterView.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C3A6D8F82806DAF20010562C /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6D8FB2806DB060010562C /* Nunito-Black.ttf */,
+				C3A6D9022806DB060010562C /* Nunito-BlackItalic.ttf */,
+				C3A6D8F92806DB060010562C /* Nunito-Bold.ttf */,
+				C3A6D8FF2806DB060010562C /* Nunito-BoldItalic.ttf */,
+				C3A6D8FD2806DB060010562C /* Nunito-ExtraBold.ttf */,
+				C3A6D9012806DB060010562C /* Nunito-ExtraBoldItalic.ttf */,
+				C3A6D9032806DB060010562C /* Nunito-ExtraLight.ttf */,
+				C3A6D9052806DB060010562C /* Nunito-ExtraLightItalic.ttf */,
+				C3A6D8FA2806DB060010562C /* Nunito-Italic.ttf */,
+				C3A6D9002806DB060010562C /* Nunito-Light.ttf */,
+				C3A6D9062806DB060010562C /* Nunito-LightItalic.ttf */,
+				C3A6D9042806DB060010562C /* Nunito-Regular.ttf */,
+				C3A6D8FC2806DB060010562C /* Nunito-SemiBold.ttf */,
+				C3A6D8FE2806DB060010562C /* Nunito-SemiBoldItalic.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
 		C3B5C13827D9EF0F008FE5C8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +700,7 @@
 		C3CD50DD27C1868400488B77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6D8E52806B75E0010562C /* Exercises.json */,
 				C3CD50DE27C1868700488B77 /* Fonts */,
 			);
 			path = Resources;
@@ -579,6 +709,7 @@
 		C3CD50DE27C1868700488B77 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6D8F82806DAF20010562C /* Nunito */,
 				C37979CF27F452D5003F6320 /* Gilroy */,
 				C37979BC27F4525F003F6320 /* Saira */,
 			);
@@ -636,8 +767,8 @@
 				C349D47627FD74D800965599 /* Progress */,
 				C37979FD27F48FC3003F6320 /* Alert */,
 				C3F4EEF327F04F0F0090CEC9 /* Button */,
-				C3DE037E27DF673900CAC875 /* Footer */,
-				C3DE037D27DF672C00CAC875 /* Header */,
+				C3DE037E27DF673900CAC875 /* Footers */,
+				C3DE037D27DF672C00CAC875 /* Headers */,
 				C36ADE1827C4EFCB00C0322C /* Cells */,
 			);
 			path = Views;
@@ -673,6 +804,7 @@
 		C3CD50E527C186D900488B77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6D8DF2806B2CC0010562C /* Muscles */,
 				C3CD50ED27C1872000488B77 /* ProfileCoreData */,
 				C3CD50EC27C1871900488B77 /* Profile */,
 				C349D47127FD72E300965599 /* Progress */,
@@ -741,22 +873,21 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C3DE037D27DF672C00CAC875 /* Header */ = {
+		C3DE037D27DF672C00CAC875 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				C3DE038B27DF69D900CAC875 /* ProfileHeaderView.swift */,
-				C3DE038D27DF6A3B00CAC875 /* ProfileHeaderView.xib */,
+				C3A6D8E92806C35D0010562C /* Profile */,
+				C3A6D8E82806C3540010562C /* Muscles */,
 			);
-			path = Header;
+			path = Headers;
 			sourceTree = "<group>";
 		};
-		C3DE037E27DF673900CAC875 /* Footer */ = {
+		C3DE037E27DF673900CAC875 /* Footers */ = {
 			isa = PBXGroup;
 			children = (
-				C3DE039127DF786300CAC875 /* ProfileFooterView.swift */,
-				C3DE038F27DF785C00CAC875 /* ProfileFooterView.xib */,
+				C3A6D8EA2806C3670010562C /* Profile */,
 			);
-			path = Footer;
+			path = Footers;
 			sourceTree = "<group>";
 		};
 		C3EB791027F1E90000E0C7A9 /* CollectionViewCell */ = {
@@ -867,25 +998,36 @@
 				C350865527DA4B8C002C8EFB /* MusclesViewController.storyboard in Resources */,
 				C37979EB27F452FC003F6320 /* Gilroy-ThinItalic.ttf in Resources */,
 				C37979EA27F452FC003F6320 /* Gilroy-Thin.ttf in Resources */,
+				C3A6D90D2806DB060010562C /* Nunito-BoldItalic.ttf in Resources */,
 				C37979F627F452FC003F6320 /* Gilroy-UltraLight.ttf in Resources */,
 				C37979E727F452FC003F6320 /* Gilroy-Light.ttf in Resources */,
 				C37979F327F452FC003F6320 /* Gilroy-Heavy.ttf in Resources */,
+				C3A6D9122806DB060010562C /* Nunito-Regular.ttf in Resources */,
+				C3A6D8E62806B75E0010562C /* Exercises.json in Resources */,
 				C3CD50D627C185FD00488B77 /* LaunchScreen.storyboard in Resources */,
 				C3CD510E27C18CEE00488B77 /* HomeViewController.storyboard in Resources */,
 				C349D47327FD744E00965599 /* ProgressBarChartViewController.storyboard in Resources */,
+				C3A6D90E2806DB060010562C /* Nunito-Light.ttf in Resources */,
 				C37979CB27F4529B003F6320 /* Saira-Thin.ttf in Resources */,
 				C3DE039027DF785C00CAC875 /* ProfileFooterView.xib in Resources */,
+				C3A6D8EF2806C3A90010562C /* MusclesSectionHeader.xib in Resources */,
+				C3A6D9132806DB060010562C /* Nunito-ExtraLightItalic.ttf in Resources */,
 				C3DE038E27DF6A3B00CAC875 /* ProfileHeaderView.xib in Resources */,
 				C3CD50D327C185FD00488B77 /* Assets.xcassets in Resources */,
 				C3CD50F527C1877600488B77 /* StartViewController.storyboard in Resources */,
 				C3797A1127F4AD58003F6320 /* CustomAlertViewController.xib in Resources */,
 				C37979F727F452FC003F6320 /* Gilroy-MediumItalic.ttf in Resources */,
+				C374274628081EA300E56B08 /* ExerciseViewController.storyboard in Resources */,
 				C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */,
+				C3A6D9072806DB060010562C /* Nunito-Bold.ttf in Resources */,
 				C36ADE2427C5089800C0322C /* MenuTableCell.xib in Resources */,
 				C37979E427F452FC003F6320 /* Gilroy-UltraLightItalic.ttf in Resources */,
+				C3A6D90B2806DB060010562C /* Nunito-ExtraBold.ttf in Resources */,
+				C3A6D9102806DB060010562C /* Nunito-BlackItalic.ttf in Resources */,
 				C37979EF27F452FC003F6320 /* Gilroy-BlackItalic.ttf in Resources */,
 				C37979C627F4529B003F6320 /* Saira-Light.ttf in Resources */,
 				C37979F427F452FC003F6320 /* Gilroy-RegularItalic.ttf in Resources */,
+				C3A6D90F2806DB060010562C /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				C37979E927F452FC003F6320 /* Gilroy-Bold.ttf in Resources */,
 				C350865327DA4B84002C8EFB /* CalculatorViewController.storyboard in Resources */,
 				C37979EE27F452FC003F6320 /* Gilroy-LightItalic.ttf in Resources */,
@@ -895,20 +1037,27 @@
 				C37979CC27F4529B003F6320 /* Saira-Bold.ttf in Resources */,
 				C350864927DA42DF002C8EFB /* ProfileViewController.storyboard in Resources */,
 				C350864F27DA4B5F002C8EFB /* ProgressViewController.storyboard in Resources */,
+				C3A6D90C2806DB060010562C /* Nunito-SemiBoldItalic.ttf in Resources */,
 				C37979CA27F4529B003F6320 /* Saira-ExtraBold.ttf in Resources */,
 				C37979C727F4529B003F6320 /* Saira-ExtraLight.ttf in Resources */,
 				C37979CD27F4529B003F6320 /* Saira-Black.ttf in Resources */,
 				C33BDB9027DA88060060A2A4 /* ProfileTableCell.xib in Resources */,
 				C37979C827F4529B003F6320 /* Saira-SemiBold.ttf in Resources */,
+				C3A6D90A2806DB060010562C /* Nunito-SemiBold.ttf in Resources */,
 				C3EB791527F1E95C00E0C7A9 /* HomeCollectionViewCell.xib in Resources */,
+				C3A6D9092806DB060010562C /* Nunito-Black.ttf in Resources */,
 				C37979F127F452FC003F6320 /* Gilroy-Extrabold.ttf in Resources */,
 				C37979EC27F452FC003F6320 /* Gilroy-SemiboldItalic.ttf in Resources */,
 				C37A8F0927E2212500311BC7 /* BodyParameterCell.xib in Resources */,
+				C3A6D9082806DB060010562C /* Nunito-Italic.ttf in Resources */,
+				C3A6D9112806DB060010562C /* Nunito-ExtraLight.ttf in Resources */,
 				C37979E827F452FC003F6320 /* Gilroy-HeavyItalic.ttf in Resources */,
 				C37979E627F452FC003F6320 /* Gilroy-ExtraboldItalic.ttf in Resources */,
 				C37979F227F452FC003F6320 /* Gilroy-BoldItalic.ttf in Resources */,
 				C350865127DA4B77002C8EFB /* ProgramsViewController.storyboard in Resources */,
+				C3A6D8F72806CD480010562C /* ExerciseCell.xib in Resources */,
 				C37979F527F452FC003F6320 /* Gilroy-Semibold.ttf in Resources */,
+				C3A6D9142806DB060010562C /* Nunito-LightItalic.ttf in Resources */,
 				C3CD50D127C185FB00488B77 /* Main.storyboard in Resources */,
 				C3F96E0927E9D31500BAC0F2 /* BodyParameterViewController.storyboard in Resources */,
 			);
@@ -927,6 +1076,7 @@
 				C3F96E6327EA1CF300BAC0F2 /* PresentAnimation.swift in Sources */,
 				C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */,
 				C3F96E5F27EA1CD200BAC0F2 /* PanelTransition.swift in Sources */,
+				C374274828081FCC00E56B08 /* ExerciseViewModel.swift in Sources */,
 				C36ADE2327C5089800C0322C /* MenuTableCell.swift in Sources */,
 				C37DB1DA27F5B059008A4ED4 /* UIViewController+DashedLine.swift in Sources */,
 				C36ADE3E27C52E8B00C0322C /* ProgressViewModel.swift in Sources */,
@@ -947,7 +1097,9 @@
 				C36ADE4427C52EB000C0322C /* CalculatorViewModel.swift in Sources */,
 				C3F4EEF527F04F3D0090CEC9 /* CustomButton.swift in Sources */,
 				C349D47527FD749000965599 /* ProgressBarChartVieweController.swift in Sources */,
+				C374274A2808526A00E56B08 /* ExerciseStorage.swift in Sources */,
 				C38834CC2805D96C00E3B4DB /* Profile+CoreDataClass.swift in Sources */,
+				C374274C280857F700E56B08 /* SingleMuscleViewModel.swift in Sources */,
 				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
 				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
 				C349D47827FD74E500965599 /* BarChartView.swift in Sources */,
@@ -958,21 +1110,25 @@
 				C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */,
 				C3F4EEFB27F058450090CEC9 /* BaseViewModel.swift in Sources */,
 				C350864327DA20B9002C8EFB /* Coordinator+Muscles.swift in Sources */,
+				C3A6D916280767D30010562C /* MusclesSectionHeader.swift in Sources */,
 				C349D47A27FD757100965599 /* BarChartEntry.swift in Sources */,
 				C3797A1027F4AD58003F6320 /* CustomAlertViewController.swift in Sources */,
 				C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */,
 				C3F96E6127EA1CE600BAC0F2 /* PresentationController.swift in Sources */,
+				C37427532808692400E56B08 /* Muscle.swift in Sources */,
 				C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */,
 				C38834CD2805D96C00E3B4DB /* Profile+CoreDataProperties.swift in Sources */,
 				C3CD50E927C186FC00488B77 /* Coordinator.swift in Sources */,
+				C374274428081E7300E56B08 /* ExerciseViewController.swift in Sources */,
 				C350863B27DA201A002C8EFB /* Coordinator+Profile.swift in Sources */,
 				C3F96E6527EA1CFC00BAC0F2 /* DismissAnimation.swift in Sources */,
 				C350863D27DA206D002C8EFB /* Coordinatr+Progress.swift in Sources */,
 				C36ADE5127C5304400C0322C /* MusclesViewController.swift in Sources */,
+				C37427502808645E00E56B08 /* ExerciseCell.swift in Sources */,
 				C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */,
 				C3CD50EF27C1872F00488B77 /* MainCoordinator.swift in Sources */,
 				C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */,
-				C36ADE4727C52EBC00C0322C /* MusclesViewModel.swift in Sources */,
+				C36ADE4727C52EBC00C0322C /* MuscleViewModel.swift in Sources */,
 				C3DE038C27DF69D900CAC875 /* ProfileHeaderView.swift in Sources */,
 				C3EB791427F1E95C00E0C7A9 /* HomeCollectionViewCell.swift in Sources */,
 				C3794DC127FC40FF00777424 /* UIResponder+Ext.swift in Sources */,

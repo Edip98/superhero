@@ -16,6 +16,9 @@ extension UIFont {
         case HelveticaNeue = "HelveticaNeue"
         case HelveticaNeueLight = "HelveticaNeue-Light"
         case GilroySemibold = "Gilroy-Semibold"
+        case NunitoLight = "Nunito-Light"
+        case NunitoSemiBold = "Nunito-SemiBold"
+        case SairaLight = "Saira-Light"
     }
     
     static func font(name: FontName, size: CGFloat) -> UIFont? {
