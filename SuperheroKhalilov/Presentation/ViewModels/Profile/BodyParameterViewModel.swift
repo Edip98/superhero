@@ -60,7 +60,7 @@ class BodyParameterViewModel {
         
         changeValue = Int16(newValue) - (valueArray.last ?? 0)
         
-        let order = Calendar.current.compare(currentDate, to: dateArray.last!, toGranularity: .day)
+        let order = Calendar.current.compare(currentDate, to: dateArray.last!, toGranularity: .second)
         
         switch order {
         case .orderedDescending:

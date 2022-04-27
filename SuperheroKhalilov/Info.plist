@@ -32,8 +32,6 @@
 	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

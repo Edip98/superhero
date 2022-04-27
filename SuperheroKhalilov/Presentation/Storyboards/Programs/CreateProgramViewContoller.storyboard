@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Program View Contoller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CreateProgramViewContoller" id="Y6W-OH-hqX" customClass="CreateProgramViewContoller" customModule="SuperheroKhalilov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="lTk-R5-k0Z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-pE-hHr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="896" id="fpG-hI-1NU"/>
+                                        </constraints>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SDs-pE-hHr" firstAttribute="leading" secondItem="lTk-R5-k0Z" secondAttribute="leading" id="8yi-va-qL3"/>
+                                    <constraint firstItem="SDs-pE-hHr" firstAttribute="top" secondItem="lTk-R5-k0Z" secondAttribute="top" id="9h5-xy-tAc"/>
+                                    <constraint firstAttribute="trailing" secondItem="SDs-pE-hHr" secondAttribute="trailing" id="dGs-Ck-Cfw"/>
+                                    <constraint firstItem="SDs-pE-hHr" firstAttribute="width" secondItem="lTk-R5-k0Z" secondAttribute="width" id="gbZ-cJ-3H2"/>
+                                    <constraint firstAttribute="bottom" secondItem="SDs-pE-hHr" secondAttribute="bottom" id="nOB-6A-RaO"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWJ-78-5lz">
+                                <rect key="frame" x="0.0" y="778" width="414" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpE-dG-0s5" customClass="CustomButton" customModule="SuperheroKhalilov" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="21" width="328" height="49"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add Exercise">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ozq-qc-CiC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SpE-dG-0s5" firstAttribute="leading" secondItem="XWJ-78-5lz" secondAttribute="leading" constant="43" id="1co-om-Uch"/>
+                                    <constraint firstAttribute="trailing" secondItem="SpE-dG-0s5" secondAttribute="trailing" constant="43" id="2rb-gX-thm"/>
+                                    <constraint firstAttribute="bottom" secondItem="SpE-dG-0s5" secondAttribute="bottom" constant="48" id="MgB-xb-E6S"/>
+                                    <constraint firstAttribute="height" constant="118" id="gZd-dr-qq8"/>
+                                    <constraint firstItem="SpE-dG-0s5" firstAttribute="top" secondItem="XWJ-78-5lz" secondAttribute="top" constant="21" id="qVj-j7-hMg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XWJ-78-5lz" secondAttribute="bottom" id="IfQ-QB-Eac"/>
+                            <constraint firstAttribute="bottom" secondItem="lTk-R5-k0Z" secondAttribute="bottom" id="M6L-aV-gN2"/>
+                            <constraint firstItem="lTk-R5-k0Z" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="RYW-s8-4Nz"/>
+                            <constraint firstItem="XWJ-78-5lz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="eyn-8Z-tqQ"/>
+                            <constraint firstItem="lTk-R5-k0Z" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="luN-SS-LLA"/>
+                            <constraint firstAttribute="trailing" secondItem="lTk-R5-k0Z" secondAttribute="trailing" id="uKD-0z-k1x"/>
+                            <constraint firstAttribute="trailing" secondItem="XWJ-78-5lz" secondAttribute="trailing" id="yHs-2r-5my"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addExerciseButton" destination="SpE-dG-0s5" id="Qf0-8a-K8P"/>
+                        <outlet property="buttonView" destination="XWJ-78-5lz" id="4ZM-sE-D3F"/>
+                        <outlet property="scrollView" destination="lTk-R5-k0Z" id="Ysx-kS-laa"/>
+                        <outlet property="tableView" destination="SDs-pE-hHr" id="pWK-Rv-5u9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
