@@ -16,6 +16,14 @@ extension MainCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func presentMusclesViewController(delegate: ExerciseSelectionProtocol?) {
+        let vc = MusclesViewController.instantiate()
+        vc.mode = .edit
+        vc.delegate = delegate
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func presentExerciseVC(with viewModel: ExerciseViewModel) {
         let vc = ExerciseViewController.instantiate()
         vc.coordinator = self

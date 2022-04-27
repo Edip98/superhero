@@ -15,6 +15,7 @@ extension UIFont {
         case FuturaBold = "Futura Bold"
         case HelveticaNeue = "HelveticaNeue"
         case HelveticaNeueLight = "HelveticaNeue-Light"
+        case HelveticaNeueUltraLight = "HelveticaNeue-UltraLight"
         case GilroySemibold = "Gilroy-Semibold"
         case NunitoLight = "Nunito-Light"
         case NunitoSemiBold = "Nunito-SemiBold"

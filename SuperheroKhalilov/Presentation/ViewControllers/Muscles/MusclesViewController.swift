@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ExerciseSelectionProtocol: AnyObject {
+    func didSelectExercises(exercises: [ExerciseViewModel])
+}
+
 enum MusclesViewControllerMode {
     case normal, edit
 }
@@ -20,9 +24,12 @@ class MusclesViewController: BaseViewController {
     private let musclesViewModel = MuscleViewModel()
     let musclesSectionHeader = MusclesSectionHeader()
     
+    weak var delegate: ExerciseSelectionProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        title = musclesViewModel.navigationBarTitle
         configureNavBar()
         configureTableView()
     }
@@ -34,7 +41,8 @@ class MusclesViewController: BaseViewController {
     }
     
     @objc func saveButtonPressed() {
-        
+        delegate?.didSelectExercises(exercises: musclesViewModel.selectedExercises)
+        self.coordinator?.back()
     }
     
     private func configureTableView() {
@@ -97,7 +105,11 @@ extension MusclesViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension MusclesViewController: MusclesTableCellDelegate {
-    func update() {
-        self.musclesTable.reloadData()
+    func update(cell: ExerciseCell) {
+        if let indexPath = musclesTable.indexPath(for: cell) {
+            musclesViewModel.selectExercise(at: indexPath)
+        }
+        navigationItem.rightBarButtonItem?.isEnabled = true
+        musclesTable.reloadData()
     }
 }

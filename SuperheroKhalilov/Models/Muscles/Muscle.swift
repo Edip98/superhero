@@ -12,7 +12,7 @@ struct Muscle: Codable {
     let exercisesList: [Exercise]
 }
 
-struct Exercise: Codable {
+struct Exercise: Codable, Equatable {
     let name: String
     let imageIcon: String
     let exerciseImage: String

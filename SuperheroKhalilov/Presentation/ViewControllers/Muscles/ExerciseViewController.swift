@@ -40,6 +40,8 @@ class ExerciseViewController: UIViewController, Storyboarded  {
     
     func configureAddButton() {
         addButton.setTitle(viewModel?.addButtonTitle, for: .normal)
+        addButton.titleLabel?.font = .font(name: .SairaRegular, size: 16)
+        
         buttonContentView.backgroundColor = .clear
         buttonContentView.addBlackGradientLayerInBackground(
             frame: buttonContentView.bounds,
@@ -85,20 +87,8 @@ class ExerciseViewController: UIViewController, Storyboarded  {
     @IBAction func addButtonAction(_ sender: CustomButton) {
         let alert = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Standart Program", style: .default, handler: { _ in
-            print("Standart Program")
-        }))
-
-        alert.addAction(UIAlertAction(title: "Program 1", style: .default, handler: { _ in
-            print("Program 1")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Program 2", style: .default, handler: { _ in
-            print("Program 2")
-        }))
-        
         alert.addAction(UIAlertAction(title: "Create New Program", style: .default, handler: { _ in
-            print("Create New Program")
+            //self.coordinator?.presentCreateProgramViewContoller
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))

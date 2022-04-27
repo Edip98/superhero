@@ -7,7 +7,10 @@
 
 import Foundation
 
-class ExerciseViewModel {
+class ExerciseViewModel: Codable, Equatable {
+    static func == (lhs: ExerciseViewModel, rhs: ExerciseViewModel) -> Bool {
+        return lhs.name == rhs.name
+    }
 
     let navigationBarTitle = "Exersice"
     let barbellImageName = "Barbell"

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProgramCell" customModule="SuperheroKhalilov" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="289" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-dz-FEJ">
+                        <rect key="frame" x="43" y="10" width="203" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8va-0Y-QU9">
+                                <rect key="frame" x="22" y="12" width="136" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AccessoryView" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-cJ-0tw">
+                                <rect key="frame" x="172" y="17" width="8" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="WVc-hB-hfc"/>
+                                    <constraint firstAttribute="width" constant="8" id="XVR-1A-mLr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DDg-cJ-0tw" secondAttribute="trailing" constant="23" id="REA-lX-ub5"/>
+                            <constraint firstItem="8va-0Y-QU9" firstAttribute="leading" secondItem="WXv-dz-FEJ" secondAttribute="leading" constant="22" id="SYL-J3-c7e"/>
+                            <constraint firstItem="8va-0Y-QU9" firstAttribute="centerY" secondItem="WXv-dz-FEJ" secondAttribute="centerY" id="USQ-8r-d5v"/>
+                            <constraint firstItem="DDg-cJ-0tw" firstAttribute="centerY" secondItem="WXv-dz-FEJ" secondAttribute="centerY" id="pdf-Na-mG1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="WXv-dz-FEJ" secondAttribute="trailing" constant="43" id="8MS-dB-dhk"/>
+                    <constraint firstAttribute="bottom" secondItem="WXv-dz-FEJ" secondAttribute="bottom" constant="11" id="HAB-G3-jPE"/>
+                    <constraint firstItem="WXv-dz-FEJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HJZ-am-D4Y"/>
+                    <constraint firstItem="WXv-dz-FEJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="43" id="hoe-Hr-viL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="accessoryViewImageView" destination="DDg-cJ-0tw" id="hBY-Bg-WaC"/>
+                <outlet property="cellContentView" destination="WXv-dz-FEJ" id="BEJ-hU-utj"/>
+                <outlet property="programNamelabel" destination="8va-0Y-QU9" id="tAv-89-irb"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="95.424107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AccessoryView" width="9" height="16"/>
+    </resources>
+</document>

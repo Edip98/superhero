@@ -15,4 +15,28 @@ extension MainCoordinator {
         vc.title = title
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func moveToProgram(with mode: ProgramMode) {
+        let vc = CreateProgramViewContoller.instantiate()
+        vc.coordinator = self
+        switch mode {
+        case .create:
+            vc.createProgramViewModel = CreateProgramViewModel(mode: .create)
+        case .edit(let program):
+            vc.createProgramViewModel = CreateProgramViewModel(mode: .edit(program: program))
+        }
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func presentCreateProgramViewContoller(with mode: ProgramMode) {
+        let vc = CreateProgramViewContoller.instantiate()
+        vc.coordinator = self
+        switch mode {
+        case .create:
+            vc.createProgramViewModel = CreateProgramViewModel(mode: .create)
+        case .edit(let program):
+            vc.createProgramViewModel = CreateProgramViewModel(mode: .edit(program: program))
+        }
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

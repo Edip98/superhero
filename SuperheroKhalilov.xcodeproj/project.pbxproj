@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3012BFE280EB7F5008BC2FA /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3012BFD280EB7F5008BC2FA /* ProgramManager.swift */; };
+		C317662A280FED1100C9E737 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3176629280FED1100C9E737 /* ProgramModel.swift */; };
+		C317662D281035D900C9E737 /* CreateProgramHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317662C281035D900C9E737 /* CreateProgramHeader.swift */; };
+		C317662F281035F900C9E737 /* CreateProgramHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C317662E281035F900C9E737 /* CreateProgramHeader.xib */; };
 		C321A7BD27E8903F0019B98A /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321A7BC27E8903F0019B98A /* String+Capitalize.swift */; };
 		C33BDB8F27DA88060060A2A4 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33BDB8D27DA88060060A2A4 /* ProfileTableCell.swift */; };
 		C33BDB9027DA88060060A2A4 /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33BDB8E27DA88060060A2A4 /* ProfileTableCell.xib */; };
@@ -91,6 +95,11 @@
 		C38834CD2805D96C00E3B4DB /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */; };
 		C38834CE2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */; };
 		C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */; };
+		C38A2588280DCA4C0007FEAD /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2586280DCA4C0007FEAD /* ProgramCell.swift */; };
+		C38A2589280DCA4C0007FEAD /* ProgramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38A2587280DCA4C0007FEAD /* ProgramCell.xib */; };
+		C3966C14280E9C2900CE19CC /* CreateProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3966C13280E9C2900CE19CC /* CreateProgramViewModel.swift */; };
+		C3966C18280E9F0300CE19CC /* CreateProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3966C16280E9F0300CE19CC /* CreateProgramCell.swift */; };
+		C3966C19280E9F0300CE19CC /* CreateProgramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3966C17280E9F0300CE19CC /* CreateProgramCell.xib */; };
 		C3A6D8E62806B75E0010562C /* Exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8E52806B75E0010562C /* Exercises.json */; };
 		C3A6D8EF2806C3A90010562C /* MusclesSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8EE2806C3A90010562C /* MusclesSectionHeader.xib */; };
 		C3A6D8F72806CD480010562C /* ExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D8F52806CD480010562C /* ExerciseCell.xib */; };
@@ -110,6 +119,8 @@
 		C3A6D9142806DB060010562C /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A6D9062806DB060010562C /* Nunito-LightItalic.ttf */; };
 		C3A6D916280767D30010562C /* MusclesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6D915280767D30010562C /* MusclesSectionHeader.swift */; };
 		C3B5C14C27D9F1EA008FE5C8 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */; };
+		C3B77F09280DEC6100240BA0 /* CreateProgramViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B77F08280DEC6100240BA0 /* CreateProgramViewContoller.swift */; };
+		C3B77F0B280DEC9F00240BA0 /* CreateProgramViewContoller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B77F0A280DEC9F00240BA0 /* CreateProgramViewContoller.storyboard */; };
 		C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50C927C185FB00488B77 /* AppDelegate.swift */; };
 		C3CD50CC27C185FB00488B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */; };
 		C3CD50D127C185FB00488B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD50CF27C185FB00488B77 /* Main.storyboard */; };
@@ -145,6 +156,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3012BFD280EB7F5008BC2FA /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
+		C3176629280FED1100C9E737 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
+		C317662C281035D900C9E737 /* CreateProgramHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgramHeader.swift; sourceTree = "<group>"; };
+		C317662E281035F900C9E737 /* CreateProgramHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateProgramHeader.xib; sourceTree = "<group>"; };
 		C321A7BC27E8903F0019B98A /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
 		C33BDB8D27DA88060060A2A4 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		C33BDB8E27DA88060060A2A4 /* ProfileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableCell.xib; sourceTree = "<group>"; };
@@ -229,6 +244,11 @@
 		C38834C92805D96C00E3B4DB /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C38834CA2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C38834CB2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C38A2586280DCA4C0007FEAD /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
+		C38A2587280DCA4C0007FEAD /* ProgramCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramCell.xib; sourceTree = "<group>"; };
+		C3966C13280E9C2900CE19CC /* CreateProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgramViewModel.swift; sourceTree = "<group>"; };
+		C3966C16280E9F0300CE19CC /* CreateProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgramCell.swift; sourceTree = "<group>"; };
+		C3966C17280E9F0300CE19CC /* CreateProgramCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateProgramCell.xib; sourceTree = "<group>"; };
 		C3A6D8E52806B75E0010562C /* Exercises.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exercises.json; sourceTree = "<group>"; };
 		C3A6D8EE2806C3A90010562C /* MusclesSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusclesSectionHeader.xib; sourceTree = "<group>"; };
 		C3A6D8F52806CD480010562C /* ExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseCell.xib; sourceTree = "<group>"; };
@@ -248,6 +268,8 @@
 		C3A6D9062806DB060010562C /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		C3A6D915280767D30010562C /* MusclesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesSectionHeader.swift; sourceTree = "<group>"; };
 		C3B5C14B27D9F1EA008FE5C8 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
+		C3B77F08280DEC6100240BA0 /* CreateProgramViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgramViewContoller.swift; sourceTree = "<group>"; };
+		C3B77F0A280DEC9F00240BA0 /* CreateProgramViewContoller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateProgramViewContoller.storyboard; sourceTree = "<group>"; };
 		C3CD50C627C185FB00488B77 /* SuperheroKhalilov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroKhalilov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD50C927C185FB00488B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3CD50CB27C185FB00488B77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +317,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3012BFC280EB7E1008BC2FA /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				C3012BFD280EB7F5008BC2FA /* ProgramManager.swift */,
+				C3176629280FED1100C9E737 /* ProgramModel.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		C317662B2810358E00C9E737 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				C317662C281035D900C9E737 /* CreateProgramHeader.swift */,
+				C317662E281035F900C9E737 /* CreateProgramHeader.xib */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
 		C33BDB8C27DA87B20060A2A4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				C350865027DA4B77002C8EFB /* ProgramsViewController.storyboard */,
+				C3B77F0A280DEC9F00240BA0 /* CreateProgramViewContoller.storyboard */,
 			);
 			path = Programs;
 			sourceTree = "<group>";
@@ -424,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				C36ADE4C27C5301B00C0322C /* ProgramsViewController.swift */,
+				C3B77F08280DEC6100240BA0 /* CreateProgramViewContoller.swift */,
 			);
 			path = Programs;
 			sourceTree = "<group>";
@@ -482,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				C36ADE4027C52EA000C0322C /* ProgramsViewModel.swift */,
+				C3966C13280E9C2900CE19CC /* CreateProgramViewModel.swift */,
 			);
 			path = Programs;
 			sourceTree = "<group>";
@@ -590,6 +633,25 @@
 				C37A8F0727E2212500311BC7 /* BodyParameterCell.xib */,
 			);
 			path = BodyParameterCell;
+			sourceTree = "<group>";
+		};
+		C38A2585280DCA100007FEAD /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				C3966C15280E9EC500CE19CC /* CreateProgram */,
+				C38A2586280DCA4C0007FEAD /* ProgramCell.swift */,
+				C38A2587280DCA4C0007FEAD /* ProgramCell.xib */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		C3966C15280E9EC500CE19CC /* CreateProgram */ = {
+			isa = PBXGroup;
+			children = (
+				C3966C16280E9F0300CE19CC /* CreateProgramCell.swift */,
+				C3966C17280E9F0300CE19CC /* CreateProgramCell.xib */,
+			);
+			path = CreateProgram;
 			sourceTree = "<group>";
 		};
 		C3A6D8DE2806ACF10010562C /* Muscles */ = {
@@ -764,6 +826,7 @@
 		C3CD50E227C186B500488B77 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C38A2585280DCA100007FEAD /* Programs */,
 				C349D47627FD74D800965599 /* Progress */,
 				C37979FD27F48FC3003F6320 /* Alert */,
 				C3F4EEF327F04F0F0090CEC9 /* Button */,
@@ -804,6 +867,7 @@
 		C3CD50E527C186D900488B77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3012BFC280EB7E1008BC2FA /* Program */,
 				C3A6D8DF2806B2CC0010562C /* Muscles */,
 				C3CD50ED27C1872000488B77 /* ProfileCoreData */,
 				C3CD50EC27C1871900488B77 /* Profile */,
@@ -876,6 +940,7 @@
 		C3DE037D27DF672C00CAC875 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				C317662B2810358E00C9E737 /* Program */,
 				C3A6D8E92806C35D0010562C /* Profile */,
 				C3A6D8E82806C3540010562C /* Muscles */,
 			);
@@ -1001,6 +1066,7 @@
 				C3A6D90D2806DB060010562C /* Nunito-BoldItalic.ttf in Resources */,
 				C37979F627F452FC003F6320 /* Gilroy-UltraLight.ttf in Resources */,
 				C37979E727F452FC003F6320 /* Gilroy-Light.ttf in Resources */,
+				C3966C19280E9F0300CE19CC /* CreateProgramCell.xib in Resources */,
 				C37979F327F452FC003F6320 /* Gilroy-Heavy.ttf in Resources */,
 				C3A6D9122806DB060010562C /* Nunito-Regular.ttf in Resources */,
 				C3A6D8E62806B75E0010562C /* Exercises.json in Resources */,
@@ -1033,6 +1099,7 @@
 				C37979EE27F452FC003F6320 /* Gilroy-LightItalic.ttf in Resources */,
 				C3794DBE27FAF46A00777424 /* ProgressAlertView.xib in Resources */,
 				C37979F027F452FC003F6320 /* Gilroy-Black.ttf in Resources */,
+				C38A2589280DCA4C0007FEAD /* ProgramCell.xib in Resources */,
 				C37979ED27F452FC003F6320 /* Gilroy-Regular.ttf in Resources */,
 				C37979CC27F4529B003F6320 /* Saira-Bold.ttf in Resources */,
 				C350864927DA42DF002C8EFB /* ProfileViewController.storyboard in Resources */,
@@ -1048,8 +1115,10 @@
 				C3A6D9092806DB060010562C /* Nunito-Black.ttf in Resources */,
 				C37979F127F452FC003F6320 /* Gilroy-Extrabold.ttf in Resources */,
 				C37979EC27F452FC003F6320 /* Gilroy-SemiboldItalic.ttf in Resources */,
+				C3B77F0B280DEC9F00240BA0 /* CreateProgramViewContoller.storyboard in Resources */,
 				C37A8F0927E2212500311BC7 /* BodyParameterCell.xib in Resources */,
 				C3A6D9082806DB060010562C /* Nunito-Italic.ttf in Resources */,
+				C317662F281035F900C9E737 /* CreateProgramHeader.xib in Resources */,
 				C3A6D9112806DB060010562C /* Nunito-ExtraLight.ttf in Resources */,
 				C37979E827F452FC003F6320 /* Gilroy-HeavyItalic.ttf in Resources */,
 				C37979E627F452FC003F6320 /* Gilroy-ExtraboldItalic.ttf in Resources */,
@@ -1074,6 +1143,7 @@
 				C37A8F0227E21DEC00311BC7 /* BodyParameterViewController.swift in Sources */,
 				C3CD50CA27C185FB00488B77 /* AppDelegate.swift in Sources */,
 				C3F96E6327EA1CF300BAC0F2 /* PresentAnimation.swift in Sources */,
+				C38A2588280DCA4C0007FEAD /* ProgramCell.swift in Sources */,
 				C36ADE4F27C5303000C0322C /* CalculatorViewController.swift in Sources */,
 				C3F96E5F27EA1CD200BAC0F2 /* PanelTransition.swift in Sources */,
 				C374274828081FCC00E56B08 /* ExerciseViewModel.swift in Sources */,
@@ -1088,9 +1158,11 @@
 				C3794DBC27FAF46000777424 /* ProgressAlertView.swift in Sources */,
 				C33BDB8F27DA88060060A2A4 /* ProfileTableCell.swift in Sources */,
 				C38834CE2805D96C00E3B4DB /* BodyParameter+CoreDataClass.swift in Sources */,
+				C3966C14280E9C2900CE19CC /* CreateProgramViewModel.swift in Sources */,
 				C350864727DA42C5002C8EFB /* ProfileViewController.swift in Sources */,
 				C3CD511027C18D3000488B77 /* HomeViewController.swift in Sources */,
 				C37A8EFD27E218F000311BC7 /* BodyParameterViewModel.swift in Sources */,
+				C317662D281035D900C9E737 /* CreateProgramHeader.swift in Sources */,
 				C37979FB27F4872A003F6320 /* ProgressTableCell.swift in Sources */,
 				C36ADE3A27C52E7200C0322C /* ProfileViewModel.swift in Sources */,
 				C3CD510527C18C1900488B77 /* UIColor+CustomColor.swift in Sources */,
@@ -1102,6 +1174,7 @@
 				C374274C280857F700E56B08 /* SingleMuscleViewModel.swift in Sources */,
 				C3CD50FA27C18BAD00488B77 /* HomeViewModel.swift in Sources */,
 				C3CD50F827C18B8F00488B77 /* StartViewModel.swift in Sources */,
+				C3012BFE280EB7F5008BC2FA /* ProgramManager.swift in Sources */,
 				C349D47827FD74E500965599 /* BarChartView.swift in Sources */,
 				C350863F27DA207B002C8EFB /* Coordinator+Programs.swift in Sources */,
 				C3CD50F327C1875900488B77 /* StartViewController.swift in Sources */,
@@ -1109,8 +1182,10 @@
 				C350864127DA209A002C8EFB /* Coordinator+Calculator.swift in Sources */,
 				C3CD510727C18C3800488B77 /* UIFont+CustomFont.swift in Sources */,
 				C3F4EEFB27F058450090CEC9 /* BaseViewModel.swift in Sources */,
+				C3966C18280E9F0300CE19CC /* CreateProgramCell.swift in Sources */,
 				C350864327DA20B9002C8EFB /* Coordinator+Muscles.swift in Sources */,
 				C3A6D916280767D30010562C /* MusclesSectionHeader.swift in Sources */,
+				C317662A280FED1100C9E737 /* ProgramModel.swift in Sources */,
 				C349D47A27FD757100965599 /* BarChartEntry.swift in Sources */,
 				C3797A1027F4AD58003F6320 /* CustomAlertViewController.swift in Sources */,
 				C38834CF2805D96C00E3B4DB /* BodyParameter+CoreDataProperties.swift in Sources */,
@@ -1128,6 +1203,7 @@
 				C36ADE4D27C5301B00C0322C /* ProgramsViewController.swift in Sources */,
 				C3CD50EF27C1872F00488B77 /* MainCoordinator.swift in Sources */,
 				C36ADE4127C52EA000C0322C /* ProgramsViewModel.swift in Sources */,
+				C3B77F09280DEC6100240BA0 /* CreateProgramViewContoller.swift in Sources */,
 				C36ADE4727C52EBC00C0322C /* MuscleViewModel.swift in Sources */,
 				C3DE038C27DF69D900CAC875 /* ProfileHeaderView.swift in Sources */,
 				C3EB791427F1E95C00E0C7A9 /* HomeCollectionViewCell.swift in Sources */,
@@ -1284,11 +1360,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroKhalilov/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Superhero\" Would Like to Access Your Photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1316,11 +1392,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroKhalilov/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Superhero\" Would Like to Access Your Photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
